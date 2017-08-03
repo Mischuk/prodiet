@@ -1,8 +1,9 @@
-# Project
+# Продиет
 
 ## Demo
-Demo: [frontend.watch/project](http://frontend.watch/project)
-Download: [project-master.zip](https://github.com/Mischuk/project/archive/master.zip)
+Demo: [frontend.watch/project](http://frontend.watch/prodiet)
+
+Download: [prodiet-master.zip](https://github.com/Mischuk/prodiet/archive/master.zip)
 
 ## Description
 * Task-runner [Gulp](http://gulpjs.com/)
