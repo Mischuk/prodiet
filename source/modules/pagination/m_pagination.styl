@@ -1,0 +1,59 @@
+.m_pagination
+  text-align center
+  margin-top 30px
+  ul
+    display inline-block
+    cursor default
+    font-size 0
+  li
+    display inline-block
+    vertical-align middle
+    margin-left 4px
+    margin-right 4px
+    a
+      min-width 0
+      position relative
+      margin-right 0
+      font-size 15px
+      color #555
+      display block
+      width 30px
+      height 30px
+      line-height 30px
+      text-align center
+      border-radius 50%
+      anim()
+      &:hover,
+      &.current
+        background $green
+        color #fff
+      &.next
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -300px -150px;
+          width: 13px;
+          height: 24px;
+          position absolute
+          left 50%
+          top 50%
+          margin-left -(@width/2)
+          margin-top -(@height/2)
+        &:hover
+          background none
+          &:after
+            background-position -300px -200px;
+      &.prev
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -250px -150px;
+          width: 13px;
+          height: 25px;
+          position absolute
+          left 50%
+          top 50%
+          margin-left -(@width/2)
+          margin-top -(@height/2)
+        &:hover
+          background none
+          &:after
+            background-position -250px -200px;

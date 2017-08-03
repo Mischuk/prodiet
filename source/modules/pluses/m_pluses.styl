@@ -1,0 +1,56 @@
+.m_pluses
+  position relative
+  padding 30px 0
+  @media LG
+    padding 50px 0
+  h2
+    margin-bottom 20px
+  .list
+    @media XS
+      text-align center
+  .item
+    position relative
+    margin-bottom 20px
+    &:first-child
+      .title
+        padding-left 85px
+    @media XS
+      display inline-block
+      vertical-align top
+      width 49%
+      text-align left
+      &:nth-child(odd)
+        padding-right 10px
+      &:nth-child(even)
+        padding-left 10px
+        .image
+          left 10px
+    @media MD
+      width 24%
+      &:nth-child(odd)
+        padding-right 0
+      &:nth-child(even)
+        padding-left 0
+        .image
+          left 0
+  .title
+    bold()
+    padding-left 70px
+    padding-top 20px
+    padding-bottom 10px
+    .image
+      position absolute
+      left 0
+      top 0
+      line-height 80px
+      img
+        display inline-block
+        vertical-align middle
+        max-width 100%
+  .desc
+    font-size 14px
+    line-height 24px
+    color #555555
+    @media MD
+      padding-right 20px
+      margin-top 10px

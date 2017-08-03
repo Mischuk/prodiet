@@ -1,0 +1,295 @@
+.m_catalog-items
+  position relative
+  .header
+    overflow hidden
+    margin-top 15px
+    line-height 15px
+    padding 15px 0
+    margin-bottom 15px
+    margin-top 0px
+    @media MD
+      padding-top 0
+      padding-bottom 0
+    .sort
+      float left
+      font-size 12px
+      @media XS
+        font-size 14px
+      .label
+        display inline-block
+        vertical-align middle
+        color #999
+        margin-right 10px
+      a
+        display inline-block
+        vertical-align middle
+        padding 0 5px
+        color $green
+        span
+          display inline-block
+          vertical-align middle
+          line-height 1
+          border-bottom 1px dashed $green
+          &:hover
+            color #000
+            border-color #000
+        i
+          display none
+    .display
+      float right
+      cursor default
+      display none
+      font-size 0
+      @media LG
+        display block
+      a
+        anim()
+        display inline-block
+        vertical-align middle
+        width 43px
+        height 32px
+        background #fff4dc
+        border 1px solid #bebebe
+        position relative
+        &:hover,
+        &.current
+          opacity 1
+          background $btn-green
+          border-color $btn-green
+        &.display-grid
+          border-radius 20px 0 0 20px
+          &:after
+            content ''
+            background: url('../images/sprite.png') no-repeat -50px -350px;
+            width: 13px;
+            height: 13px;
+            position absolute
+            left 50%
+            top 50%
+            margin-left -(@width/2)
+            margin-top -(@height/2)
+          &:hover,
+          &.current
+            &:after
+              background-position 0 -350px
+        &.display-row
+          border-radius 0 20px 20px 0
+          &:after
+            content ''
+            background: url('../images/sprite.png') no-repeat -50px -400px;
+            width: 13px;
+            height: 13px;
+            position absolute
+            left 50%
+            top 50%
+            margin-left -(@width/2)
+            margin-top -(@height/2)
+          &:hover,
+          &.current
+            &:after
+              background-position 0 -400px
+
+  .list
+    clearfix()
+
+  .display-row
+    @media LG
+      overflow visible !important
+      .col
+        width 100%
+        margin-left 0 !important
+        .item
+          height 200px
+          padding-bottom 0
+          .image
+            width 250px
+            padding-right 15px
+            height 200px
+            line-height 200px
+            position absolute
+            left 0
+            top 0
+          .details
+            padding-left 250px
+            padding-top 30px
+            padding-right 300px
+            padding-bottom 0
+            .price
+              position absolute
+              right 150px
+              top 0
+              left auto
+              background none
+              font-size 20px
+              width 130px
+              padding-top 25px
+          .bottom
+            position static
+            height auto
+            background none
+            border-top none
+            padding-left 250px
+            height 45px
+            .total-items
+              height 45px
+              background #f0f0f0
+              float none
+            .add-to-cart
+              float none
+              height 40px
+              width 125px
+              position absolute
+              right 15px
+              top 30px
+              a
+                anim()
+                border-radius 20px
+                background $red
+                color #fff
+                text-align center
+                line-height 40px
+                padding-left 30px
+                font-size 14px
+                box-shadow 0px 8px 16px rgba(237, 49, 49, .36)
+                &:hover
+                  background $btn-green
+                  box-shadow 0 8px 16px rgba(105, 154, 53, .36)
+                &:after
+                  background-position -250px -250px
+                  margin-left 0
+                  left 20px
+                &:before
+                  content 'Купить'
+
+  .item
+    background #fff
+    box-shadow 2px 2px 2px rgba(0,0,0,.3)
+    height 380px
+    position relative
+    padding-bottom 50px
+    margin-bottom 15px
+    border 1px solid #dddddd
+    border-radius $radius
+    @media MD
+      margin-bottom 0
+    .image
+      height 200px
+      line-height 200px
+      text-align center
+      a
+        display block
+        width 100%
+        height 100%
+        img
+          display inline-block
+          vertical-align middle
+          max-width 100%
+          max-height 100%
+    .details
+      padding 0 15px 15px
+      .title
+        margin-bottom 10px
+        word-break break-word
+        @media screen and (min-width: 460px)
+          overflow hidden
+          max-height 66px
+        @media LG
+          max-height 92px
+        a
+          bold()
+          color #000
+          font-size 15px
+          &:hover
+            color $green
+      .available
+        margin-bottom 10px
+        span
+          font-size 14px
+          &.yes
+            color $green
+          &.no
+            color #bebebe
+      .price
+        bold()
+        font-size 15px
+        @media LG
+          position absolute
+          left 0
+          bottom 0
+          line-height 45px
+          width 105px
+          text-align center
+          z-index 1
+          background #fff
+    .bottom
+      clearfix()
+      position absolute
+      left 0
+      bottom 0
+      width 100%
+      background #f0f0f0
+      border-top 1px solid #ebebeb
+      height 46px
+      @media LG
+        padding-left 105px
+      .total-items
+        float left
+        width 120px
+        height 45px
+        text-align center
+        line-height 43px
+        overflow hidden
+        input
+          float left
+        .qty
+          width 50px
+          height 35px
+          margin 5px 0
+          text-align center
+          font-size 16px
+          color #555555
+          background #fff
+          border-radius $radius
+          border none
+        .qtyminus,
+        .qtyplus
+          width 35px
+          height 45px
+          color #555
+          background none
+          border none
+          color #999999
+          font-weight bold
+          font-size 0
+          text-indent -9999px
+        .qtyminus
+          background: url('../images/counter-buttons.png') no-repeat -14px -1px;
+          &:hover
+            background-position -6px -68px
+        .qtyplus
+          background: url('../images/counter-buttons.png') no-repeat -66px 3px;
+          &:hover
+            background-position -74px -64px
+      .add-to-cart
+        float right
+        height 100%
+        width 45px
+        a
+          display block
+          width 100%
+          height 100%
+          background #fff
+          position relative
+          &:after
+            content ''
+            background: url('../images/sprite.png') no-repeat -200px -200px;
+            width: 24px;
+            height: 21px;
+            position absolute
+            left 50%
+            top 50%
+            margin-left -(@width/2)
+            margin-top -(@height/2)
+          &:hover
+            &:after
+              background-position -200px -250px

@@ -1,0 +1,264 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Корзина
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+
+  .page-header.main-overlay.large-space
+    .image(style="background-image: url('images/page-header/4.jpg')")
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Корзина
+    .wrapper
+      .text
+        .title Корзина
+  main
+    .m_cart
+      .cart-items
+        table
+          tr
+            th
+            th Наименование
+            th Цена
+            th Количество
+            th Сумма
+            th
+          tr
+            td
+              .image: a(href="#"): img(src="images/item/1.png" alt="")
+            td
+              .title: a(href="#") Наименование товара, которое может быть в несколько строк
+              .details
+                ul
+                  li Вес: 100 г
+                  li Белки: 100 г
+                  li Жиры: 100 г
+                  li Углеводы: 100 г
+                  li Каллорийность: 200 ккал
+            td
+              .sum 11 000 руб.
+            td
+              .count
+                .total-items
+                  input(type='text' name='quantity-1' value='1' class='qty' disabled)
+                  input(type='button' value='–' class='qtyminus' field='quantity-1')
+                  input(type='button' value='+' class='qtyplus' field='quantity-1')
+            td
+              .sum 11 000 руб.
+            td
+              .remove: a(href="#")
+          tr
+            td
+              .image: a(href="#"): img(src="images/item/2.png" alt="")
+            td
+              .title: a(href="#") Наименование товара, которое может быть в несколько строк
+              .details
+                ul
+                  li Вес: 100 г
+                  li Белки: 100 г
+                  li Жиры: 100 г
+                  li Углеводы: 100 г
+                  li Каллорийность: 200 ккал
+            td
+              .sum 11 000 руб.
+            td
+              .count
+                .total-items
+                  input(type='text' name='quantity-2' value='1' class='qty' disabled)
+                  input(type='button' value='–' class='qtyminus' field='quantity-2')
+                  input(type='button' value='+' class='qtyplus' field='quantity-2')
+            td
+              .sum 11 000 руб.
+            td
+              .remove: a(href="#")
+          tr
+            td
+              .image: a(href="#"): img(src="images/item/3.png" alt="")
+            td
+              .title: a(href="#") Наименование товара, которое может быть в несколько строк
+              .details
+                ul
+                  li Вес: 100 г
+                  li Белки: 100 г
+                  li Жиры: 100 г
+                  li Углеводы: 100 г
+                  li Каллорийность: 200 ккал
+            td
+              .sum 11 000 руб.
+            td
+              .count
+                .total-items
+                  input(type='text' name='quantity-3' value='1' class='qty' disabled)
+                  input(type='button' value='–' class='qtyminus' field='quantity-3')
+                  input(type='button' value='+' class='qtyplus' field='quantity-3')
+            td
+              .sum 11 000 руб.
+            td
+              .remove: a(href="#")
+          tr
+            td
+              .image: a(href="#"): img(src="images/item/4.png" alt="")
+            td
+              .title: a(href="#") Наименование товара, которое может быть в несколько строк
+              .details
+                ul
+                  li Вес: 100 г
+                  li Белки: 100 г
+                  li Жиры: 100 г
+                  li Углеводы: 100 г
+                  li Каллорийность: 200 ккал
+            td
+              .sum 11 000 руб.
+            td
+              .count
+                .total-items
+                  input(type='text' name='quantity-4' value='1' class='qty' disabled)
+                  input(type='button' value='–' class='qtyminus' field='quantity-4')
+                  input(type='button' value='+' class='qtyplus' field='quantity-4')
+            td
+              .sum 11 000 руб.
+            td
+              .remove: a(href="#")
+      .cart-items-total
+        .codes
+          form.form
+            .form-row
+              label
+                input(type="text" placeholder="Код купона на скидку")
+                i.i-code
+            .form-row
+              button(class="btn btn-green" type="submit") Применить
+        .total-price Итого: <span>44 000 руб.</span>
+      .cart-items-action
+        .submit
+          a(class="btn btn-red" href="#") Оформить заказ
+        .back
+          a(class="forward" href="#") Продолжить покупки
+          a(class="backward" href="#") Вернуться к выбору товара
+    .m_pluses
+      h2 Преимущества Продиет
+      .list
+        .item
+          .title
+            .image: img(src="images/pluses-1.png" alt="")
+            span Доставка <br>по всей России
+          .desc Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку.
+        .item
+          .title
+            .image: img(src="images/pluses-2.png" alt="")
+            span Наличный и <br>безналичный расчет
+          .desc Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку.
+        .item
+          .title
+            .image: img(src="images/pluses-3.png" alt="")
+            span Гарантия качества <br>всех товаров
+          .desc Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку.
+        .item
+          .title
+            .image: img(src="images/pluses-4.png" alt="")
+            span Возврат товара <br>в течение 30 дней
+          .desc Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку.
+    .m_top-items
+      .wrapper
+        .top-items-nav
+          a(class="top current" href="#") Лучшие предложения
+          a(class="new" href="#") Ранее вы смотрели
+        .top-items-loader
+          span
+          span
+          span
+        .top-items-content
+          // Хиты продаж
+          .top-items-carousel-top.top-item-carousels.enabled
+            - for (var x = 0; x < 2; x++)
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/1.png", alt="")
+                  .details
+                    .title: a(href="#") Клетчатка пшеничная крупная 150г * 14шт
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 11 560 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/2.png", alt="")
+                  .details
+                    .title: a(href="#") Фитококтейль SK FIBERIA Энергия Ваниль 350г * 12 шт
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 11 560 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/3.png", alt="")
+                  .details
+                    .title: a(href="#") Батончик овсянный Петродиет черничный в шок. глазури 35г * 25шт
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 11 560 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/4.png", alt="")
+                  .details
+                    .title: a(href="#") Заменитель сахара на осн. эритритола №10 САШЕ 1г * 60 пак * 32 шт ФитПарад
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 11 560 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")
+          // Новинки
+          .top-items-carousel-new.top-item-carousels.disabled
+            - for (var x = 0; x < 10; x++)
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/2.png", alt="")
+                  .details
+                    .title: a(href="#") ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 2 123 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")

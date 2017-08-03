@@ -1,0 +1,35 @@
+doctype html
+html(lang="ru").no-js
+  head
+    block title
+      title Default title
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="msapplication-tap-highlight" content="no")
+    meta(name="description" content="A description of the page")
+    meta(name="subject" content="тематика вашего сайта")
+    meta(name="robots" content="index,follow,noodp")
+    meta(name="googlebot" content="index,follow")
+    meta(name="google" content="nositelinkssearchbox")
+    meta(name="google" content="notranslate")
+    meta(name="rating" content="General")
+    meta(name="format-detection" content="telephone=no")
+    meta(http-equiv='set-cookie' content='name=value; expires=date; path=url')
+    link(rel="stylesheet" href="css/plugins.css")
+    link(rel="stylesheet" href="css/app.css")
+    script(src="js/modernizr.js")
+  body
+    block settings
+    block data
+    include ../header/m_header
+    .container
+      block content
+    include ../footer/m_footer
+    // Modals
+    include ../modals/m_modals
+    .backdrop
+    // Javascript
+    script(src="js/jquery.min.js")
+    script(src="js/plugins.js")
+    script(src="js/app.js")

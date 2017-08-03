@@ -1,0 +1,329 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Главная
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .m_lead-carousel
+    -
+      var lead_carousel = [
+        {
+          image: 'images/lead-carousel-img-1.png',
+          title: 'Здоровое питание',
+          desc: 'Дорогие друзья, в нашем интернет-магазине вы найдете диетические, диабетические и здоровые продукты на любой вкус'
+        },
+        {
+          image: 'images/lead-carousel-img-2.png',
+          title: 'Здоровое питание #2',
+          desc: 'Дорогие друзья, в нашем интернет-магазине вы найдете диетические, диабетические и здоровые продукты на любой вкус'
+        },
+        {
+          image: 'images/lead-carousel-img-3.png',
+          title: 'Здоровое питание #3',
+          desc: 'Дорогие друзья, в нашем интернет-магазине вы найдете диетические, диабетические и здоровые продукты на любой вкус'
+        }
+      ]
+    each item in lead_carousel
+      .slide
+        .wrapper
+          .slide-image
+            img(src="#{item.image}" alt="")
+          .slide-text
+            h1 #{item.title}
+            p #{item.desc}
+            .action
+              a(class="btn btn-red btn-arrow" href="#") Смотреть каталог
+  .m_lead-categories
+    .wrapper
+      .row
+        .item.large
+          a(href="#")
+            .title Диабетические <br>продукты
+            .image: img(src="images/lead-category-1.png", alt="")
+        .item.small
+          a(href="#")
+            .title Постная <br>продукция
+            .image: img(src="images/lead-category-2.png", alt="")
+        .item.small
+          a(href="#")
+            .title Каши <br>и хлопья
+            .image: img(src="images/lead-category-3.png", alt="")
+        .item.large
+          a(href="#")
+            .title Бакалея
+            .image: img(src="images/lead-category-4.png", alt="")
+      .details
+        a.btn.btn-green.btn-arrow(href="#") Перейти в каталог
+  .m_top-items
+    .wrapper
+      .top-items-nav
+        a(class="top current" href="#") Хит продаж
+        a(class="new" href="#") Новинка
+      .top-items-loader
+        span
+        span
+        span
+      .top-items-content
+        // Хиты продаж
+        .top-items-carousel-top.top-item-carousels.enabled
+          - for (var x = 0; x < 2; x++)
+            .slide
+              .item
+                .image: a(href="#"): img(src="images/item/1.png", alt="")
+                .details
+                  .title: a(href="#") Клетчатка пшеничная крупная 150г * 14шт
+                  .available
+                    span.yes В наличии
+                    span.no Нет в наличии
+                  .price 11 560 руб.
+                .bottom
+                  .total-items
+                    input(type='button' value='–' class='qtyminus' field='quantitytop1'+x)
+                    input(type='text' name='quantitytop1'+x value='1' class='qty')
+                    input(type='button' value='+' class='qtyplus' field='quantitytop1'+x)
+                  .add-to-cart
+                    a(href="#")
+            .slide
+              .item
+                .image: a(href="#"): img(src="images/item/2.png", alt="")
+                .details
+                  .title: a(href="#") Фитококтейль SK FIBERIA Энергия Ваниль 350г * 12 шт
+                  .available
+                    span.yes В наличии
+                    span.no Нет в наличии
+                  .price 11 560 руб.
+                .bottom
+                  .total-items
+                    input(type='button' value='–' class='qtyminus' field='quantitytop2'+x)
+                    input(type='text' name='quantitytop2'+x value='1' class='qty')
+                    input(type='button' value='+' class='qtyplus' field='quantitytop2'+x)
+                  .add-to-cart
+                    a(href="#")
+            .slide
+              .item
+                .image: a(href="#"): img(src="images/item/3.png", alt="")
+                .details
+                  .title: a(href="#") Батончик овсянный Петродиет черничный в шок. глазури 35г * 25шт
+                  .available
+                    span.yes В наличии
+                    span.no Нет в наличии
+                  .price 11 560 руб.
+                .bottom
+                  .total-items
+                    input(type='button' value='–' class='qtyminus' field='quantitytop3'+x)
+                    input(type='text' name='quantitytop3'+x value='1' class='qty')
+                    input(type='button' value='+' class='qtyplus' field='quantitytop3'+x)
+                  .add-to-cart
+                    a(href="#")
+            .slide
+              .item
+                .image: a(href="#"): img(src="images/item/4.png", alt="")
+                .details
+                  .title: a(href="#") Заменитель сахара на осн. эритритола №10 САШЕ 1г * 60 пак * 32 шт ФитПарад
+                  .available
+                    span.yes В наличии
+                    span.no Нет в наличии
+                  .price 11 560 руб.
+                .bottom
+                  .total-items
+                    input(type='button' value='–' class='qtyminus' field='quantitytop4'+x)
+                    input(type='text' name='quantitytop4'+x value='1' class='qty')
+                    input(type='button' value='+' class='qtyplus' field='quantitytop4'+x)
+                  .add-to-cart
+                    a(href="#")
+        // Новинки
+        .top-items-carousel-new.top-item-carousels.disabled
+          - for (var x = 0; x < 10; x++)
+            .slide
+              .item
+                .image: a(href="#"): img(src="images/item/2.png", alt="")
+                .details
+                  .title: a(href="#") ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка
+                  .available
+                    span.yes В наличии
+                    span.no Нет в наличии
+                  .price 2 123 руб.
+                .bottom
+                  .total-items
+                    input(type='button' value='–' class='qtyminus' field='quantitytop'+x)
+                    input(type='text' name='quantitytop'+x value='1' class='qty')
+                    input(type='button' value='+' class='qtyplus' field='quantitytop'+x)
+                  .add-to-cart
+                    a(href="#")
+  .m_proposals
+    .wrapper
+      .section-title
+        h2 Акции
+        .details
+          a.btn.btn-green(href="#") Смотреть все
+      .top-items-carousel-top.top-item-carousels
+        - for (var x = 0; x < 2; x++)
+          .slide
+            .item
+              .image: a(href="#" style="background-image: url(images/news/1.png)")
+              .details
+                .post-date 2 июня 2017
+                .title: a(href="#") Комплектом дешевле
+                .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!»
+
+          .slide
+            .item
+              .image: a(href="#" style="background-image: url(images/news/2.png)")
+              .details
+                .post-date 2 июня 2017
+                .title: a(href="#") Комплектом дешевле
+                .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!»
+          .slide
+            .item
+              .image: a(href="#" style="background-image: url(images/news/3.png)")
+              .details
+                .post-date 2 июня 2017
+                .title: a(href="#") Комплектом дешевле
+                .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!»
+          .slide
+            .item
+              .image: a(href="#" style="background-image: url(images/news/4.png)")
+              .details
+                .post-date 2 июня 2017
+                .title: a(href="#") Комплектом дешевле
+                .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!»
+      .action
+        a.btn.btn-green.btn-arrow(href="#") Смотреть все
+  .m_lead-articles
+    .wrapper
+      .section-title
+        h2 Новые статьи
+        .total-articles
+          a(href="#")
+            span.value 235
+            span.label полезных статей <br>на каждый день
+      .articles
+        .top-items-carousel-top.top-item-carousels
+          - for (var x = 0; x < 2; x++)
+            .slide
+              .item(itemscope itemtype="http://schema.org/Question")
+                .image: a(href="#" style="background-image: url('images/articles-1.png')")
+                .details
+                  .post-category Советы
+                  .title: a(href="#" itemprop="name") Симптомы дефицита железа: что делать и какие продукты выбирать
+                  .desc(itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer") <span itemprop="text">Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.</span>
+                .bottom
+                  .viewed 43
+            .slide
+              .item(itemscope itemtype="http://schema.org/Question")
+                .image: a(href="#" style="background-image: url('images/articles-2.png')")
+                .details
+                  .post-category Диета
+                  .title: a(href="#" itemprop="name") Симптомы дефицита железа: что делать и какие продукты выбирать
+                  .desc(itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer") <span itemprop="text">Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.</span>
+                .bottom
+                  .viewed 43
+            .slide
+              .item(itemscope itemtype="http://schema.org/Question")
+                .image: a(href="#" style="background-image: url('images/articles-3.png')")
+                .details
+                  .post-category О продуктах
+                  .title: a(href="#" itemprop="name") Симптомы дефицита железа: что делать и какие продукты выбирать
+                  .desc(itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer") <span itemprop="text">Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.</span>
+                .bottom
+                  .viewed 43
+  .m_lead-recipes
+    .wrapper
+      .section-title
+        h2 Новые рецепты
+        .total-articles
+          a(href="#")
+            span.value 1235
+            span.label рецептов <br>на каждый день
+      .top-items-carousel-top.top-item-carousels
+        - for (var x = 0; x < 2; x++)
+          .slide
+            .item
+              .image: a(href="#" style="background-image: url('images/food-1.png')")
+              .details
+                .title: a(href="#") Горбуша с овощами под лимонным соком
+                .complexity Легкий
+                .tag
+                  a(href="#") Ужин
+                  a(href="#") На каждый день
+                  a(href="#") Для диабетиков
+                .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+              .bottom
+                .dur 1 час 20 минут
+                .weight 450 ккал
+          .slide
+            .item
+              .image: a(href="#" style="background-image: url('images/food-2.png')")
+              .details
+                .title: a(href="#") Мясо с авокадо
+                .complexity Легкий
+                .tag
+                  a(href="#") Ужин
+                  a(href="#") На каждый день
+                  a(href="#") Для диабетиков
+                .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+              .bottom
+                .dur 1 час 20 минут
+                .weight 450 ккал
+          .slide
+            .item
+              .image: a(href="#" style="background-image: url('images/food-3.png')")
+              .details
+                .title: a(href="#") Салат с оливками
+                .complexity Легкий
+                .tag
+                  a(href="#") Ужин
+                  a(href="#") На каждый день
+                  a(href="#") Для диабетиков
+                .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+              .bottom
+                .dur 1 час 20 минут
+                .weight 450 ккал
+          .slide
+            .item
+              .image: a(href="#" style="background-image: url('images/food-4.png')")
+              .details
+                .title: a(href="#") Острый суп с креветками и перцем чили
+                .complexity Средний
+                .tag
+                  a(href="#") Ужин
+                  a(href="#") На каждый день
+                  a(href="#") Для диабетиков
+                .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+              .bottom
+                .dur 1 час 20 минут
+                .weight 450 ккал
+
+
+  .m_lead-comments
+    .wrapper
+      .section-title
+        h2 Отзывы покупателей
+        .details
+          a.btn.btn-green(href="#") Смотреть все
+      .top-items-carousel-top.top-item-carousels
+        - for (var x = 0; x < 8; x++)
+          .slide
+            .item
+              .name Иванов Иван
+              .rated
+                span(class="progress" style="width: 71%")
+              .post Находясь в Минске не почувствовал проблем с приобретением и доставкой товара.Компетентные менеджеры подробно рассказали про мой заказ не экономя на звонке в Беларусь.Спасибо!
+              .details: a(href="#") Читать полностью
+      .action
+        a.btn.btn-green.btn-arrow(href="#") Смотреть все
+  .m_lead-story
+    .wrapper
+      .section-title
+        h2 О компании
+      article
+        p Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку, выбрать способ оплаты и доставки заказа в сети Интернет. Выбрав необходимые товары или услуги, пользователь обычно имеет возможность тут же на сайте выбрать метод оплаты и доставки. Основное отличие Интернет-магазина от традиционного — в типе торговой площадки. Обычному магазину нужен торговый зал, витрины, ценники, а также продавцы, кассиры и опытные консультанты, у онлайн-магазина же вся инфраструктура реализована программно.
+        p Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку, выбрать способ оплаты и доставки заказа в сети Интернет. Выбрав необходимые товары или услуги, пользователь обычно имеет возможность тут же на сайте выбрать метод оплаты и доставки.
+        .details
+          a.btn.btn-green.btn-arrow(href="#") Подробнее

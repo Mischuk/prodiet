@@ -1,0 +1,235 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Рецепт
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+
+  .page-header.main-overlay.large-space
+    .image(style="background-image: url('images/page-header/4.jpg')")
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Рецепты
+        li: a(href="#") Ужин
+    .wrapper
+      .text
+        .title Салат с оливками и кунжутной заправкой
+  main
+    .container
+      .sidebar
+        .search-recipe
+          form
+            input(type="text" placeholder="Поиск рецепта")
+            button(type="submit")
+        .latest-recipes
+          .title Новые рецепты
+          .list
+            .item
+              .image: a(href="#"): img(src="images/latest-recipes-1.jpg", alt="")
+              .details
+                .title: a(href="#") Салат с оливками
+                .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения.
+            .item
+              .image: a(href="#"): img(src="images/latest-recipes-2.jpg", alt="")
+              .details
+                .title: a(href="#") Салат с оливками
+                .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения.
+            .item
+              .image: a(href="#"): img(src="images/latest-recipes-3.jpg", alt="")
+              .details
+                .title: a(href="#") Салат с оливками
+                .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения.
+            .item
+              .image: a(href="#"): img(src="images/latest-recipes-4.jpg", alt="")
+              .details
+                .title: a(href="#") Салат с оливками
+                .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения.
+            .item
+              .image: a(href="#"): img(src="images/latest-recipes-3.jpg", alt="")
+              .details
+                .title: a(href="#") Салат с оливками
+                .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения.
+        .partnership-view
+          a(class="item" href="#"): img(src="images/sidebar-stock.jpg" alt="")
+        .m_download-tips
+          .type Бесплатная брошюра
+          .title 10 советов при выборе системы питания
+          .action
+            a(class="btn btn-red" href="#") Скачать брошюру
+      .content
+        article(itemscope itemtype="http://schema.org/Recipe")
+          img(src="images/article-image-1.jpg" alt="Салат с оливками и кунжутной заправкой" itemprop="name")
+          .m_recipe-panel
+            .row
+              .complexity Уровень сложности: <span>Легкий</span>
+              .dur <meta itemprop="totalTime" content="PT45M"/> 1 ч 20 мин
+              .weight 450 ккал
+            .row
+              ul.tags
+                li: a(href="#") <span itemprop="recipeIngredient">Мясо</span>
+                li: a(href="#") <span itemprop="recipeIngredient">Рыба</span>
+                li: a(href="#") <span itemprop="recipeIngredient">Злаки</span>
+                li: a(href="#") <span itemprop="recipeIngredient">Морепродукты</span>
+                li: a(href="#") <span itemprop="recipeIngredient">Овощи</span>
+          p Культура питания — вещь сугубо индивидуальная и жутко сложная. Люди, взявшие за правило получать максимум пользы от всего, что они делают, стараются так же поступать и с приемами пищи, предпочитая здоровое, сбалансированное питание.
+          p Соблюдать этот "здоровый баланс" крайне сложно: все дело в том, что витамины и микроэлементы, содержащиеся в нашей еде, могут плохо усваиваться вместе и даже нейтрализовать пользу друг друга. Мы решили собрать для вас самые популярные антисочетания, которые частенько попадают к нам на стол, и рассказать, почему от них есть смысл отказаться.
+          .m_recipe-ingredients
+            h2 Ингредиенты
+            .ingredients-cart
+              .item
+                .image
+                  a(href="#")
+                    img(src="images/ing-1.jpg", alt="")
+                .details
+                  .title: a(href="#") Оливковое масло «Madama Oliva» Extra Virgin BIO
+                  .desc 500 мл. бутылка, темное стекло
+                .action
+                  .count
+                    .total-items
+                      input(type='text' name='quantity-1' value='1' class='qty' disabled)
+                      input(type='button' value='–' class='qtyminus' field='quantity-1')
+                      input(type='button' value='+' class='qtyplus' field='quantity-1')
+                    .add-to-cart
+                  .price 11 450 руб.
+                  .add-to-cart
+                    a(href="#")
+              .item
+                .image
+                  a(href="#")
+                    img(src="images/ing-2.jpg", alt="")
+                .details
+                  .title: a(href="#") Оливковое масло «Madama Oliva» Extra Virgin BIO
+                  .desc 500 мл. бутылка, темное стекло
+                .action
+                  .count
+                    .total-items
+                      input(type='text' name='quantity-2' value='1' class='qty' disabled)
+                      input(type='button' value='–' class='qtyminus' field='quantity-2')
+                      input(type='button' value='+' class='qtyplus' field='quantity-2')
+                  .price 11 450 руб.
+                  .add-to-cart
+                    a(href="#")
+              .item
+                .image
+                  a(href="#")
+                    img(src="images/ing-3.jpg", alt="")
+                .details
+                  .title: a(href="#") Оливки «Madama Oliva» Extra Virgin BIO
+                  .desc 500 мл. банка
+                .action
+                  .count
+                    .total-items
+                      input(type='text' name='quantity-3' value='1' class='qty' disabled)
+                      input(type='button' value='–' class='qtyminus' field='quantity-3')
+                      input(type='button' value='+' class='qtyplus' field='quantity-3')
+                  .price 450 руб.
+                  .add-to-cart
+                    a(href="#")
+            ul.ingredients-list
+              li(itemprop="ingredients") Помидоров черри — 6 штук
+              li(itemprop="ingredients") Лук-шалот— 1 штука
+              li(itemprop="ingredients") Соль — по вкусу
+              li(itemprop="ingredients") Перец — по вкусу
+          h2 Способ приготовления
+          h4 Шаг 1
+          p В кипящую воду положить креветки буквально на одну минуту. Опрокинуть их на дуршлаг и дать стечь воде. Очистить их от хвостиков.
+          h4 Шаг 2
+          p Разогреть оливковое масло в сковороде. Чеснок почистить, разрезать пополам. Чили разрезать пополам и удалить зёрнышки.<br>В разогретое масло выложить чеснок и перец, жарить до румяности.
+          img(src="images/articles-lead-1.png" alt="")
+          h4 Шаг 3
+          p Как только чеснок зарумянится, убрать его и перец. Масло станет ароматное и острое. Выложить туда креветки и жарить буквально 2 минуты. Поперчить по желанию.
+          .frame
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/mmdHBtLFwqE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen)
+          h4 Шаг 4
+          p Как только чеснок зарумянится, убрать его и перец. Масло станет ароматное и острое. Выложить туда креветки и жарить буквально 2 минуты. Поперчить по желанию.
+
+          .bottom-article
+            .share
+              .title Рекомендовать друзьям
+              script(src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js")
+              script(src="//yastatic.net/share2/share.js")
+              div(class="ya-share2" data-services="vkontakte,facebook,odnoklassniki" data-counter="5")
+            .articles-nav
+              .previous
+                a(href="#")
+                  .arrow.prev-arrow
+                  .label Предыдущая статья
+                  .title Тартар из сельди с авокадо
+              .next
+                a(href="#")
+                  .arrow.next-arrow
+                  .label Следущая статья
+                  .title Турецкий салат
+    .m_lead-recipes
+      .wrapper
+        .section-title
+          h2 Рекомендуем
+          .total-articles
+            a(href="#")
+              span.value 1235
+              span.label рецептов <br>на каждый день
+        .top-items-carousel-top.top-item-carousels
+          - for (var x = 0; x < 2; x++)
+            .slide
+              .item
+                .image: a(href="#" style="background-image: url('images/food-1.png')")
+                .details
+                  .title: a(href="#") Горбуша с овощами под лимонным соком
+                  .complexity Легкий
+                  .tag
+                    a(href="#") Ужин
+                    a(href="#") На каждый день
+                    a(href="#") Для диабетиков
+                  .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+                .bottom
+                  .dur 1 час 20 минут
+                  .weight 450 ккал
+            .slide
+              .item
+                .image: a(href="#" style="background-image: url('images/food-2.png')")
+                .details
+                  .title: a(href="#") Мясо с авокадо
+                  .complexity Легкий
+                  .tag
+                    a(href="#") Ужин
+                    a(href="#") На каждый день
+                    a(href="#") Для диабетиков
+                  .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+                .bottom
+                  .dur 1 час 20 минут
+                  .weight 450 ккал
+            .slide
+              .item
+                .image: a(href="#" style="background-image: url('images/food-3.png')")
+                .details
+                  .title: a(href="#") Салат с оливками
+                  .complexity Легкий
+                  .tag
+                    a(href="#") Ужин
+                    a(href="#") На каждый день
+                    a(href="#") Для диабетиков
+                  .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+                .bottom
+                  .dur 1 час 20 минут
+                  .weight 450 ккал
+            .slide
+              .item
+                .image: a(href="#" style="background-image: url('images/food-4.png')")
+                .details
+                  .title: a(href="#") Острый суп с креветками и перцем чили
+                  .complexity Средний
+                  .tag
+                    a(href="#") Ужин
+                    a(href="#") На каждый день
+                    a(href="#") Для диабетиков
+                  .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+                .bottom
+                  .dur 1 час 20 минут
+                  .weight 450 ккал

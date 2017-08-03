@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+	<head>
+		<title>Корзина</title>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="description" content="A description of the page">
+		<meta name="subject" content="тематика вашего сайта">
+		<meta name="robots" content="index,follow,noodp">
+		<meta name="googlebot" content="index,follow">
+		<meta name="google" content="nositelinkssearchbox">
+		<meta name="google" content="notranslate">
+		<meta name="rating" content="General">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="set-cookie" content="name=value; expires=date; path=url">
+		<link href="css/plugins.css" rel="stylesheet">
+		<link href="css/app.css" rel="stylesheet">
+		<script src="js/modernizr.js"></script>
+	</head>
+
+	<body>
+		<header class="m_header">
+			<div class="top">
+				<div class="wrapper">
+					<div class="mobile-menu">
+						<div class="btn-mobile-menu">
+							<i></i>
+						</div>
+					</div>
+					<div class="menu">
+						<ul>
+							<li>
+								<a href="#">О компании</a>
+							</li>
+							<li>
+								<a href="#">Система скидок</a>
+							</li>
+							<li>
+								<a href="#">Как заказать</a>
+							</li>
+							<li>
+								<a href="#">Контакты</a>
+							</li>
+						</ul>
+					</div>
+					<div class="socials">
+						<ul>
+							<li>
+								<a class="vk" href="#"></a>
+							</li>
+							<li>
+								<a class="in" href="#"></a>
+							</li>
+							<li>
+								<a class="fb" href="#"></a>
+							</li>
+							<li>
+								<a class="gp" href="#"></a>
+							</li>
+							<li>
+								<a class="tw" href="#"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="wrapper">
+					<div class="logo">
+						<a href="#">
+							<img src="images/logo.png" title="Интернет-магазин здорового питания" alt>
+							<span>Интернет-магазин здорового питания</span>
+						</a>
+					</div>
+					<div class="actions">
+						<div class="row">
+							<div class="mobile-search">
+								<button class="btn-mobile-search" type="button"></button>
+							</div>
+							<div class="search">
+								<form>
+									<input type="text" placeholder="Введите название товара" autocomplete="off">
+									<button type="submit"></button>
+								</form>
+							</div>
+							<div class="contacts">
+								<div class="tel">
+									<a href="#">8 800 2000 600</a>
+								</div>
+								<div class="callback">
+									<a class="btn-modal" href="#modal-callback">Заказать звонок</a>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<nav>
+								<ul>
+									<li>
+										<a class="btn-modal" href="#modal-catalog">Каталог продукции</a>
+									</li>
+									<li>
+										<a href="#">Акции</a>
+									</li>
+									<li>
+										<a href="#">Новинки</a>
+									</li>
+									<li>
+										<a href="#">Статьи</a>
+									</li>
+									<li>
+										<a href="#">Рецепты</a>
+									</li>
+								</ul>
+							</nav>
+							<div class="user-panel">
+								<div class="guest">
+									<a class="btn-modal" href="#modal-signin">Вход</a>
+								</div>
+								<div class="authorised">
+									<div class="desktop">
+										<div class="username">Спиридонов Константин Иванович</div>
+										<div class="options">
+											<a href="#">Личный кабинет</a>
+											<a href="#">Выйти</a>
+										</div>
+									</div>
+									<div class="mobile">
+										<a href="#">
+											<div class="username">Спиридонов Константин Иванович</div>
+										</a>
+									</div>
+								</div>
+								<div class="cart">
+									<a class="btn-modal" href="#modal-cart">
+										<span class="label">
+											<span class="value">3</span> товаров</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="responsive-menu">
+				<ul>
+					<li>
+						<a class="btn-modal" href="#modal-catalog">Каталог продукции</a>
+					</li>
+					<li>
+						<a href="#">Акции</a>
+					</li>
+					<li>
+						<a href="#">Новинки</a>
+					</li>
+					<li>
+						<a href="#">Статьи</a>
+					</li>
+					<li>
+						<a href="#">Рецепты</a>
+					</li>
+					<li>
+						<a href="#">О компании</a>
+					</li>
+					<li>
+						<a href="#">Система скидок</a>
+					</li>
+					<li>
+						<a href="#">Как заказать</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<div class="container">
+			<div class="page-header main-overlay large-space">
+				<div class="image" style="background-image: url('images/page-header/4.jpg')"></div>
+				<div class="m_breadcrumbs">
+					<ul>
+						<li>
+							<a href="#">Главная</a>
+						</li>
+						<li>
+							<a href="#">Корзина</a>
+						</li>
+					</ul>
+				</div>
+				<div class="wrapper">
+					<div class="text">
+						<div class="title">Корзина</div>
+					</div>
+				</div>
+			</div>
+			<main>
+				<div class="m_cart">
+					<div class="cart-items">
+						<table>
+							<tr>
+								<th></th>
+								<th>Наименование</th>
+								<th>Цена</th>
+								<th>Количество</th>
+								<th>Сумма</th>
+								<th></th>
+							</tr>
+							<tr>
+								<td>
+									<div class="image">
+										<a href="#">
+											<img src="images/item/1.png" alt>
+										</a>
+									</div>
+								</td>
+								<td>
+									<div class="title">
+										<a href="#">Наименование товара, которое может быть в несколько строк</a>
+									</div>
+									<div class="details">
+										<ul>
+											<li>Вес: 100 г</li>
+											<li>Белки: 100 г</li>
+											<li>Жиры: 100 г</li>
+											<li>Углеводы: 100 г</li>
+											<li>Каллорийность: 200 ккал</li>
+										</ul>
+									</div>
+								</td>
+								<td>
+									<div class="sum">11 000 руб.</div>
+								</td>
+								<td>
+									<div class="count">
+										<div class="total-items">
+											<input class="qty" name="quantity-1" type="text" value="1" disabled>
+											<input class="qtyminus" type="button" value="–" field="quantity-1">
+											<input class="qtyplus" type="button" value="+" field="quantity-1">
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="sum">11 000 руб.</div>
+								</td>
+								<td>
+									<div class="remove">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="image">
+										<a href="#">
+											<img src="images/item/2.png" alt>
+										</a>
+									</div>
+								</td>
+								<td>
+									<div class="title">
+										<a href="#">Наименование товара, которое может быть в несколько строк</a>
+									</div>
+									<div class="details">
+										<ul>
+											<li>Вес: 100 г</li>
+											<li>Белки: 100 г</li>
+											<li>Жиры: 100 г</li>
+											<li>Углеводы: 100 г</li>
+											<li>Каллорийность: 200 ккал</li>
+										</ul>
+									</div>
+								</td>
+								<td>
+									<div class="sum">11 000 руб.</div>
+								</td>
+								<td>
+									<div class="count">
+										<div class="total-items">
+											<input class="qty" name="quantity-2" type="text" value="1" disabled>
+											<input class="qtyminus" type="button" value="–" field="quantity-2">
+											<input class="qtyplus" type="button" value="+" field="quantity-2">
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="sum">11 000 руб.</div>
+								</td>
+								<td>
+									<div class="remove">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="image">
+										<a href="#">
+											<img src="images/item/3.png" alt>
+										</a>
+									</div>
+								</td>
+								<td>
+									<div class="title">
+										<a href="#">Наименование товара, которое может быть в несколько строк</a>
+									</div>
+									<div class="details">
+										<ul>
+											<li>Вес: 100 г</li>
+											<li>Белки: 100 г</li>
+											<li>Жиры: 100 г</li>
+											<li>Углеводы: 100 г</li>
+											<li>Каллорийность: 200 ккал</li>
+										</ul>
+									</div>
+								</td>
+								<td>
+									<div class="sum">11 000 руб.</div>
+								</td>
+								<td>
+									<div class="count">
+										<div class="total-items">
+											<input class="qty" name="quantity-3" type="text" value="1" disabled>
+											<input class="qtyminus" type="button" value="–" field="quantity-3">
+											<input class="qtyplus" type="button" value="+" field="quantity-3">
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="sum">11 000 руб.</div>
+								</td>
+								<td>
+									<div class="remove">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="image">
+										<a href="#">
+											<img src="images/item/4.png" alt>
+										</a>
+									</div>
+								</td>
+								<td>
+									<div class="title">
+										<a href="#">Наименование товара, которое может быть в несколько строк</a>
+									</div>
+									<div class="details">
+										<ul>
+											<li>Вес: 100 г</li>
+											<li>Белки: 100 г</li>
+											<li>Жиры: 100 г</li>
+											<li>Углеводы: 100 г</li>
+											<li>Каллорийность: 200 ккал</li>
+										</ul>
+									</div>
+								</td>
+								<td>
+									<div class="sum">11 000 руб.</div>
+								</td>
+								<td>
+									<div class="count">
+										<div class="total-items">
+											<input class="qty" name="quantity-4" type="text" value="1" disabled>
+											<input class="qtyminus" type="button" value="–" field="quantity-4">
+											<input class="qtyplus" type="button" value="+" field="quantity-4">
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="sum">11 000 руб.</div>
+								</td>
+								<td>
+									<div class="remove">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="cart-items-total">
+						<div class="codes">
+							<form class="form">
+								<div class="form-row">
+									<label>
+										<input type="text" placeholder="Код купона на скидку">
+										<i class="i-code"></i>
+									</label>
+								</div>
+								<div class="form-row">
+									<button class="btn btn-green" type="submit">Применить</button>
+								</div>
+							</form>
+						</div>
+						<div class="total-price">Итого:
+							<span>44 000 руб.</span>
+						</div>
+					</div>
+					<div class="cart-items-action">
+						<div class="submit">
+							<a class="btn btn-red" href="#">Оформить заказ</a>
+						</div>
+						<div class="back">
+							<a class="forward" href="#">Продолжить покупки</a>
+							<a class="backward" href="#">Вернуться к выбору товара</a>
+						</div>
+					</div>
+				</div>
+				<div class="m_pluses">
+					<h2>Преимущества Продиет</h2>
+					<div class="list">
+						<div class="item">
+							<div class="title">
+								<div class="image">
+									<img src="images/pluses-1.png" alt>
+								</div>
+								<span>Доставка
+									<br>по всей России</span>
+							</div>
+							<div class="desc">Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку.</div>
+						</div>
+						<div class="item">
+							<div class="title">
+								<div class="image">
+									<img src="images/pluses-2.png" alt>
+								</div>
+								<span>Наличный и
+									<br>безналичный расчет</span>
+							</div>
+							<div class="desc">Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку.</div>
+						</div>
+						<div class="item">
+							<div class="title">
+								<div class="image">
+									<img src="images/pluses-3.png" alt>
+								</div>
+								<span>Гарантия качества
+									<br>всех товаров</span>
+							</div>
+							<div class="desc">Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку.</div>
+						</div>
+						<div class="item">
+							<div class="title">
+								<div class="image">
+									<img src="images/pluses-4.png" alt>
+								</div>
+								<span>Возврат товара
+									<br>в течение 30 дней</span>
+							</div>
+							<div class="desc">Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку.</div>
+						</div>
+					</div>
+				</div>
+				<div class="m_top-items">
+					<div class="wrapper">
+						<div class="top-items-nav">
+							<a class="top current" href="#">Лучшие предложения</a>
+							<a class="new" href="#">Ранее вы смотрели</a>
+						</div>
+						<div class="top-items-loader">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<div class="top-items-content">
+							<!-- Хиты продаж-->
+							<div class="top-items-carousel-top top-item-carousels enabled">
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/1.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">Клетчатка пшеничная крупная 150г * 14шт</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">11 560 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity0">
+												<input class="qty" name="quantity0" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity0">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/2.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">Фитококтейль SK FIBERIA Энергия Ваниль 350г * 12 шт</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">11 560 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity0">
+												<input class="qty" name="quantity0" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity0">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/3.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">Батончик овсянный Петродиет черничный в шок. глазури 35г * 25шт</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">11 560 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity0">
+												<input class="qty" name="quantity0" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity0">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/4.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">Заменитель сахара на осн. эритритола №10 САШЕ 1г * 60 пак * 32 шт ФитПарад</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">11 560 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity0">
+												<input class="qty" name="quantity0" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity0">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/1.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">Клетчатка пшеничная крупная 150г * 14шт</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">11 560 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity1">
+												<input class="qty" name="quantity1" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity1">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/2.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">Фитококтейль SK FIBERIA Энергия Ваниль 350г * 12 шт</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">11 560 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity1">
+												<input class="qty" name="quantity1" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity1">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/3.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">Батончик овсянный Петродиет черничный в шок. глазури 35г * 25шт</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">11 560 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity1">
+												<input class="qty" name="quantity1" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity1">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/4.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">Заменитель сахара на осн. эритритола №10 САШЕ 1г * 60 пак * 32 шт ФитПарад</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">11 560 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity1">
+												<input class="qty" name="quantity1" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity1">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Новинки-->
+							<div class="top-items-carousel-new top-item-carousels disabled">
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/2.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">2 123 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity0">
+												<input class="qty" name="quantity0" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity0">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/2.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">2 123 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity1">
+												<input class="qty" name="quantity1" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity1">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/2.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">2 123 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity2">
+												<input class="qty" name="quantity2" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity2">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/2.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">2 123 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity3">
+												<input class="qty" name="quantity3" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity3">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/2.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">2 123 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity4">
+												<input class="qty" name="quantity4" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity4">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/2.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">2 123 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity5">
+												<input class="qty" name="quantity5" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity5">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/2.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">2 123 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity6">
+												<input class="qty" name="quantity6" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity6">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/2.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">2 123 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity7">
+												<input class="qty" name="quantity7" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity7">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/2.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">2 123 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity8">
+												<input class="qty" name="quantity8" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity8">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="item">
+										<div class="image">
+											<a href="#">
+												<img src="images/item/2.png" alt>
+											</a>
+										</div>
+										<div class="details">
+											<div class="title">
+												<a href="#">ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка</a>
+											</div>
+											<div class="available">
+												<span class="yes">В наличии</span>
+												<span class="no">Нет в наличии</span>
+											</div>
+											<div class="price">2 123 руб.</div>
+										</div>
+										<div class="bottom">
+											<div class="total-items">
+												<input class="qtyminus" type="button" value="–" field="quantity9">
+												<input class="qty" name="quantity9" type="text" value="1">
+												<input class="qtyplus" type="button" value="+" field="quantity9">
+											</div>
+											<div class="add-to-cart">
+												<a href="#"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<footer class="m_footer" itemtype="http://schema.org/Organization" itemscope>
+			<div class="wrapper">
+				<div class="copyright">
+					<span>2017 ©
+						<i itemprop="name">Продиет.ру:</i>
+					</span>
+					<span>Интернет-магазин по продаже диетического и диабетического питания</span>
+				</div>
+				<div class="menu">
+					<div class="column">
+						<div class="title">
+							<a href="#">Компания</a>
+						</div>
+						<ul>
+							<li>
+								<a href="#">О компании</a>
+							</li>
+							<li>
+								<a href="#">Контакты</a>
+							</li>
+						</ul>
+					</div>
+					<div class="column">
+						<div class="title">
+							<a href="#">Информация</a>
+						</div>
+						<ul>
+							<li>
+								<a href="#">Условия оплаты</a>
+							</li>
+							<li>
+								<a href="#">Доставка</a>
+							</li>
+							<li>
+								<a href="#">Система скидок</a>
+							</li>
+							<li>
+								<a href="#">Как заказать</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="info">
+					<div class="row">
+						<div class="tel">
+							<a href="#" itemprop="telephone">8 800 2000 600</a>
+						</div>
+						<div class="callback">
+							<a class="btn-modal" href="#modal-callback">Заказать звонок</a>
+						</div>
+					</div>
+					<div class="row" itemtype="http://schema.org/PostalAddress" itemprop="address" itemscope>
+						<div class="local">
+							<span>
+								<i itemprop="addressLocality">Москва</i>, ул.
+								<i itemprop="streetAddress">Воронцовская, 20</i>
+							</span>
+						</div>
+						<div class="email">
+							<a href="#">
+								<span itemprop="email">info@prodiet.info</span>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="socials">
+							<span>Мы в соц. сетях:</span>
+							<a class="vk" href="#"></a>
+							<a class="in" href="#"></a>
+							<a class="fb" href="#"></a>
+							<a class="gp" href="#"></a>
+							<a class="tw" href="#"></a>
+						</div>
+						<div class="payment">
+							<span>Мы принимаем к оплате:</span>
+						</div>
+					</div>
+					<div class="developed">Разработка сайта
+						<a href="#">«Пикмедиа»</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Modals-->
+		<div class="modal zoom-anim-dialog mfp-hide" id="modal-ty">
+			<div class="modal-title">
+				<h2>Наш менеджер свяжется с Вами в ближайшее время</h2>
+			</div>
+			<div class="modal-body">
+				<div class="socials">
+					<h4>Мы в соц. сетях:</h4>
+					<ul>
+						<li>
+							<a class="vk" href="#"></a>
+						</li>
+						<li>
+							<a class="in" href="#"></a>
+						</li>
+						<li>
+							<a class="fb" href="#"></a>
+						</li>
+						<li>
+							<a class="gp" href="#"></a>
+						</li>
+						<li>
+							<a class="tw" href="#"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="modal zoom-anim-dialog mfp-hide" id="modal-ty-simple">
+			<div class="modal-title">
+				<h2>Ваш заказ принят!
+					<br>Наш менеджер свяжется с Вами в ближайшее время.</h2>
+			</div>
+		</div>
+		<div class="modal zoom-anim-dialog mfp-hide" id="modal-ty-comments">
+			<div class="modal-title">
+				<h2>Ваш отзыв успешно отправлен.
+					<br>После прохождения модерации он будет опубликован на сайте!</h2>
+			</div>
+		</div>
+		<div class="modal zoom-anim-dialog mfp-hide" id="modal-callback">
+			<div class="modal-title">
+				<h2>Заказать звонок</h2>
+				<p>Мы свяжемся с Вами в ближайшее время</p>
+			</div>
+			<div class="modal-body">
+				<form class="form success_popup">
+					<div class="form-row">
+						<label>
+							<input type="text" placeholder="Как Вас зовут?">
+							<i class="i-name"></i>
+						</label>
+					</div>
+					<div class="form-row">
+						<label>
+							<input type="tel" placeholder="Ваш телефон" required>
+							<i class="i-tel"></i>
+						</label>
+					</div>
+					<div class="form-row">
+						<button class="btn btn-green ripple" type="submit">Отправить заявку</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal zoom-anim-dialog mfp-hide" id="modal-signin">
+			<div class="modal-title">
+				<h2>Вход с логином и паролем</h2>
+			</div>
+			<div class="modal-body">
+				<form class="form">
+					<div class="form-row">
+						<label>
+							<input type="email" placeholder="Ваш email" required>
+							<i class="i-email"></i>
+						</label>
+					</div>
+					<div class="form-row">
+						<label>
+							<input type="password" placeholder="Пароль" required>
+							<i class="i-password"></i>
+						</label>
+					</div>
+					<div class="form-row">
+						<button class="btn btn-green ripple" type="submit">Войти</button>
+					</div>
+				</form>
+				<div class="social-signin">
+					<h4>Войти через профиль в соцсетях</h4>
+					<ul>
+						<li>
+							<a class="vk" href="#"></a>
+						</li>
+						<li>
+							<a class="in" href="#"></a>
+						</li>
+						<li>
+							<a class="fb" href="#"></a>
+						</li>
+						<li>
+							<a class="gp" href="#"></a>
+						</li>
+						<li>
+							<a class="tw" href="#"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="modal zoom-anim-dialog mfp-hide" id="modal-cart">
+			<div class="modal-body">
+				<div class="user-cart">
+					<div class="items">
+						<div class="item">
+							<div class="image">
+								<a href="#">
+									<img src="images/item/3.png" alt>
+								</a>
+							</div>
+							<div class="details">
+								<div class="title">
+									<a href="#">Батончик овсяный ПЕТРОДИЕТ черничный в шок.глазури 35г* 25шт</a>
+								</div>
+								<div class="cost">
+									<div class="price">10 000 руб.</div>
+									<div class="count">x 1 шт</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="image">
+								<a href="#">
+									<img src="images/item/1.png" alt>
+								</a>
+							</div>
+							<div class="details">
+								<div class="title">
+									<a href="#">Клетчатка крупная 35г* 25шт</a>
+								</div>
+								<div class="cost">
+									<div class="price">2 500 руб.</div>
+									<div class="count">x 1 шт</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="image">
+								<a href="#">
+									<img src="images/item/2.png" alt>
+								</a>
+							</div>
+							<div class="details">
+								<div class="title">
+									<a href="#">SK Fiber Энергия 35г* 25шт</a>
+								</div>
+								<div class="cost">
+									<div class="price">1 250 руб.</div>
+									<div class="count">x 1 шт</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="total">Общая сумма:
+						<span class="value">13 750 руб.</span>
+					</div>
+					<div class="action">
+						<a class="btn btn-red ripple" href="#">Перейти в корзину</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal zoom-anim-dialog mfp-hide" id="modal-catalog">
+			<div class="modal-body">
+				<div class="catalog">
+					<div class="column">
+						<div class="item">
+							<div class="title">
+								<a href="#">Хлебцы, Хлебные палочки</a>
+							</div>
+							<ul>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+							</ul>
+						</div>
+						<div class="item">
+							<div class="title">
+								<a href="#">Постная продукция</a>
+							</div>
+							<ul>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="column">
+						<div class="item">
+							<div class="title">
+								<a href="#">Продукция из Имбиря</a>
+							</div>
+							<ul>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+								<li>
+									<a href="#">Подкатегория (100)</a>
+								</li>
+							</ul>
+						</div>
+						<div class="item">
+							<div class="title">
+								<a href="#">Растительные масла</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="title">
+								<a href="#">Продукция из Сои</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="title">
+								<a href="#">Доп. категория</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal zoom-anim-dialog mfp-hide" id="modal-simple-add-to-cart">
+			<div class="modal-title">
+				<h2>Купить в 1 клик</h2>
+			</div>
+			<div class="modal-body">
+				<div class="user-cart">
+					<div class="items">
+						<div class="item">
+							<div class="image">
+								<a href="#">
+									<img src="images/item/3.png" alt>
+								</a>
+							</div>
+							<div class="details">
+								<div class="title">
+									<a href="#">Батончик овсяный ПЕТРОДИЕТ черничный в шок.глазури 35г* 25шт</a>
+								</div>
+								<div class="cost">
+									<div class="price">10 000 руб.</div>
+									<div class="count">x 1 шт</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="total">Общая сумма:
+						<span class="value">10 000 руб.</span>
+					</div>
+				</div>
+				<form class="form success_popup">
+					<div class="form-row">
+						<label>
+							<input type="text" placeholder="Как Вас зовут?">
+							<i class="i-name"></i>
+						</label>
+					</div>
+					<div class="form-row">
+						<label>
+							<input type="email" placeholder="Ваш email" required>
+							<i class="i-email"></i>
+						</label>
+					</div>
+					<div class="form-row">
+						<label>
+							<textarea placeholder="Комментарий к заказу"></textarea>
+							<i class="i-msg"></i>
+						</label>
+					</div>
+					<div class="form-row">
+						<button class="btn btn-green ripple" type="submit">Купить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="backdrop"></div>
+		<!-- Javascript-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+
+</html>

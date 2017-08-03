@@ -1,0 +1,91 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Мои данные
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+
+  .page-header.main-overlay.large-space
+    .image(style="background-image: url('images/page-header/4.jpg')")
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Мои данные
+    .wrapper
+      .text
+        .title Мои данные
+        .backward: a(href="#") Вернуться в каталог
+  main
+    .m_cabinet
+      .cabinet-nav
+        a(class="btn btn-green" href="#") Список заказов
+        a(class="btn btn-green current" href="#") Мои данные
+        a(class="btn btn-green" href="#") Отложенные товары
+      .cabinet-data
+        .user-personal
+          form
+            .form-row
+              label
+                span.label ФИО
+                input(type="text" value="Иванов Иван Иванович")
+            .form-row
+              label
+                span.label Номер вашего телефона
+                input(type="tel" value="+7 (812) 333-33-33")
+            .form-row
+              label
+                span.label Ваш email
+                input(type="email" value="ivan@mail.ru")
+            .form-row
+              label
+                span.label Пароль
+                input(type="text" value="qwerty")
+            .form-row
+              label
+                span.label Подтверждение пароля
+                input(type="text" value="qwerty")
+            .form-row
+              .rss-feed
+                .checkboxes
+                  label
+                    input(type="checkbox" name="rss" value="1")
+                    i.icon
+                    i.label Получать на почту информацию об акциях
+            .form-row
+              button(class="btn btn-green" type="submit") Сохранить
+          form
+            .form-row
+              label
+                span.label Адрес доставки (основной)
+                input(type="text" value="ул. Аккуратова 12, кв. 123")
+            .form-row
+              label
+                span.label Адрес доставки (дополнительный)
+                input(type="text" value="ул. Аккуратова 12, кв. 124")
+              .set-lead: a(href="#") Сделать основным
+            .form-row
+              label
+                span.label Адрес доставки (дополнительный)
+                input(type="text" value="ул. Аккуратова 12, кв. 125")
+              .set-lead: a(href="#") Сделать основным
+            .form-row
+              button(class="btn btn-green" type="submit") Сохранить
+        .user-global
+          .user-name Иванов Иван Иванович
+          .user-id ID: 37432942934
+          .user-rate Ваша личная скидка на товары - <span>15%</span>
+          .user-rate-up Чтобы получить скидку в 20% вам необходимо приобрести товара на общую сумму — 6 000 руб.
+          .user-coupones
+            .title Ваши купоны:
+            ul
+              li 3435NTRE-YCFX145 — <span>активен до 21.05.2017</span>
+              li 3435NTRE-YCFX145 — <span>активен до 21.05.2017</span>
+              li.disabled 3435NTRE-YCFX145 — просрочен
+              li.disabled 3435NTRE-YCFX145 — просрочен
+              li.disabled 3435NTRE-YCFX145 — просрочен

@@ -1,0 +1,214 @@
+.modal
+  position relative
+  max-width 540px
+  margin 20px auto
+  padding 30px 15px
+  background #fff
+  border-radius $radius
+  @media XS
+    padding 30px
+  @media SM
+    padding 50px 55px
+  &#modal-catalog
+    max-width 1000px
+  &#modal-ty,
+  &#modal-ty-simple,
+  &#modal-ty-comments
+    h2
+      roman()
+      font-size 24px
+      line-height 1.3
+      margin-bottom 0
+  p
+    &:last-child
+      margin-bottom 0
+  .mfp-close
+    background: url('../images/sprite.png') no-repeat 0 -50px;
+    width: 15px;
+    height: 15px;
+    right 10px
+    top 10px
+    font-size 0
+    text-indent -9999px
+    opacity 1
+    &:hover
+      background-position 0 -100px
+  .modal-title
+    margin-bottom 15px
+    h2
+      margin-bottom 10px
+    p
+      color $brown
+      font-size 18px
+      line-height 1
+  .modal-body
+    position relative
+  .socials,
+  .social-signin
+    margin-top 15px
+    cursor default
+    @media SM
+      margin-top 30px
+    li
+      display inline-block
+      vertical-align middle
+      margin-right 5px
+      margin-top 10px
+    a
+      display block
+      width 30px
+      height 30px
+      background-image url("../images/sprite.png")
+      background-repeat no-repeat
+      &.vk
+        background-position 0 0
+        &:hover
+          background-position -250px 0
+      &.in
+        background-position -50px 0
+        &:hover
+          background-position -300px 0
+      &.fb
+        background-position -100px 0
+        &:hover
+          background-position -350px 0
+      &.gp
+        background-position -150px 0
+        &:hover
+          background-position -400px 0
+      &.tw
+        background-position -200px 0
+        &:hover
+          background-position -450px 0
+  .socials
+    margin-top 15px
+    ul,
+    h4
+      display inline-block
+      vertical-align middle
+      roman()
+      font-size 14px
+      line-height 30px
+    h4
+      margin-top 10px
+      margin-right 5px
+  .catalog
+    .column
+      width 100%
+      padding-bottom 30px
+      @media MD
+        width 49%
+        display inline-block
+        vertical-align top
+      &:first-child
+        @media MD
+          padding-right 15px
+      &:last-child
+        padding-bottom 0
+    .item
+      padding-bottom 30px
+      &:last-child
+        padding-bottom 0
+      .title
+        @media MD
+          margin-bottom 5px
+        a
+          color #000
+          futuris()
+          font-size 20px
+          line-height 1
+          &:hover
+            color $green
+      ul
+        margin-left -5px
+        li
+          display inline-block
+          vertical-align top
+          a
+            anim()
+            color $green
+            font-size 14px
+            display inline-block
+            vertical-align middle
+            padding 5px
+            &:hover
+              color #000
+  .user-cart
+    .total
+      background #f0f0f0
+      bold()
+      margin-bottom 30px
+      text-align center
+      padding 15px
+      font-size 15px
+      .value
+        font-size 20px
+    .action
+      text-align center
+    .items
+      .item
+        border-bottom 1px solid $border
+        margin-bottom 15px
+        padding-bottom 15px
+        position relative
+        @media XS
+          min-height 115px
+          padding-left 115px
+        &:last-child
+          border-bottom none
+        .image
+          text-align center
+          margin-bottom 10px
+          @media XS
+            position absolute
+            left 0
+            top 0
+            width 100px
+            height 100px
+            line-height 100px
+            border 1px solid $border
+            background #fff
+            &:hover
+              border-color $green
+          a
+            display block
+            padding 15px
+            border 1px solid $border
+            @media XS
+              height 100%
+              width 100%
+              padding 0
+              border none
+            &:hover
+              border-color $green
+
+
+            img
+              max-width 95%
+              max-height 95%
+              display inline-block
+              vertical-align middle
+        .details
+          .title
+            margin-bottom 5px
+            a
+              bold()
+              display inline-block
+              vertical-align middle
+              font-size 15px
+              line-height 24px
+              color $green
+              &:hover
+                color #000
+          .cost
+            .price,
+            .count
+              display inline
+            .price
+              bold()
+            .count
+              color #666
+              font-size 14px
+  &#modal-simple-add-to-cart
+    .total
+      text-align left

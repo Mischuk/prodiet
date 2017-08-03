@@ -1,0 +1,189 @@
+.m_catalog-recipes
+  position relative
+.catalog-recipes-carousel
+  position relative
+  margin-top 20px
+  .slick-slide
+    margin 0 10px
+  .slick-list
+    margin 0 -10px
+  .slick-arrow
+    anim()
+    width 50px
+    height 50px
+    position absolute
+    top 50px
+    background #fff
+    border-radius 50%
+    border none
+    text-indent -9999px
+    box-shadow 0 16px 38px rgba(0,0,0,.35)
+    z-index 1
+    @media SM
+      top 75px
+    @media screen and (min-width: 1370px)
+      top 50%
+      margin-top -25px
+    &:hover
+      background $btn-green
+      box-shadow 0 8px 16px rgba(0,0,0,.25)
+    &:after
+      content ''
+      position absolute
+      left 50%
+      top 50%
+      background-image url("../images/sprite.png")
+      background-repeat no-repeat
+    &.slick-prev
+      left 15px
+      @media screen and (min-width: 1370px)
+        left 50%
+        margin-left -655px
+      &:after
+        width 13px
+        height 25px
+        margin-top -(@height/2)
+        margin-left -(@width/2)
+        background-position -250px -150px
+      &:hover
+        &:after
+          background-position -300px -250px
+    &.slick-next
+      right 15px
+      @media screen and (min-width: 1370px)
+        right 50%
+        margin-right -655px
+      &:after
+        width 13px
+        height 24px
+        margin-top -(@height/2)
+        margin-left -5px
+        background-position -300px -150px
+      &:hover
+        &:after
+          background-position -350px -250px
+  .item
+    background #fff
+    box-shadow 2px 2px 2px rgba(0,0,0,.3)
+    border-radius $radius
+    position relative
+    padding-bottom 50px
+    overflow hidden
+    line-height 1
+    .image
+      position relative
+      height 150px
+      @media SM
+        height 200px
+      &:after
+        display none
+      a
+        display block
+        width 100%
+        height 100%
+        background-size cover
+        background-position 50%
+        background-repeat no-repeat
+        position relative
+        &:after
+          anim()
+          content ''
+          width 100%
+          height 100%
+          position absolute
+          left 0
+          top 0
+          background black
+          opacity 0
+        &:hover
+          &:after
+            opacity .2
+    .details
+      padding 15px
+      text-align center
+      line-height 1
+      .title
+        margin-bottom 10px
+        roman()
+        font-size 0
+        a
+          color #000
+          bold()
+          anim()
+          font-size 17px
+          @media screen and (min-width: 460px)
+            font-size 15px
+          @media SM
+            font-size 17px
+          &:hover
+            color $green
+      .complexity
+        color #bebebe
+        font-size 14px
+      .tag
+        font-size 0
+        a
+          anim()
+          display inline-block
+          vertical-align middle
+          background #d6d395
+          border-radius $radius
+          color #fff
+          text-transform uppercase
+          font-size 10px
+          padding 5px 15px
+          margin 4px
+          @media screen and (min-width: 460px)
+            padding 2px 5px
+          @media LG
+            padding 5px 15px
+          &:hover
+            background #699a35
+      .desc
+        font-size 14px
+        line-height 24px
+        color #555555
+        padding-top 10px
+    .bottom
+      clearfix()
+      position absolute
+      left 0
+      bottom 0
+      width 100%
+      height 50px
+      line-height 49px
+      z-index 2
+      border-top 1px solid #ebebeb
+      padding 0 15px
+      background #fff
+      .dur
+        float left
+        position relative
+        padding-left 25px
+        font-size 14px
+        color #555555
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -150px -300px;
+          width: 20px;
+          height: 20px;
+          position absolute
+          left 0
+          top 50%
+          margin-top -10px
+      .weight
+        float right
+        position relative
+        position relative
+        padding-left 25px
+        font-size 14px
+        color #555555
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -100px -300px;
+          width: 20px;
+          height: 19px;
+          position absolute
+          left 0
+          top 50%
+          margin-top -13px

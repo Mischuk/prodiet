@@ -1,0 +1,288 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Оформление товара
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+
+  .page-header.main-overlay.large-space
+    .image(style="background-image: url('images/page-header/4.jpg')")
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Оформление товара
+    .wrapper
+      .text
+        .title Оформление товара
+  main
+    .m_order
+      .order-bill
+        .positions
+          .items
+            .label Товаров на сумму:
+            .value: span 20 500 руб.
+          .delivery
+            .label Доставка:
+            .value: span 500 руб.
+        .total
+          .label Итого:
+          .value: span 21 000 руб.
+      form.order-steps
+        .step.step-1.current
+          .step-header <span>Шаг 1.</span> Доставка
+          .step-body
+            .delivery-self(data-order-delivery="Самовывоз")
+              .default-icon
+                .icon
+                .label: span Самовывоз <i class="count">94 пункта</i>
+              .delivery-form
+                .default-icon-active
+                  .icon
+                .form-section
+                  input(type="hidden" name="delivery-self-address" value="")
+                  .delivery-self-list.ps-container.ps-theme-default.ps-active-y
+                    ul
+                      li <span class="address">Комендантский проспект, д. 33, корп. 1, ТЦ "Курень"</span> <a href="#">Выбрать</a>
+                      li <span class="address">Комендантский проспект, д. 34, корп. 2, ТЦ "Курень"</span> <a href="#">Выбрать</a>
+                      li <span class="address">Комендантский проспект, д. 35, корп. 3, ТЦ "Курень"</span> <a href="#">Выбрать</a>
+                      li <span class="address">Комендантский проспект, д. 36, корп. 4, ТЦ "Курень"</span> <a href="#">Выбрать</a>
+                      li <span class="address">Комендантский проспект, д. 37, корп. 5, ТЦ "Курень"</span> <a href="#">Выбрать</a>
+                      li <span class="address">Комендантский проспект, д. 38, корп. 6, ТЦ "Курень"</span> <a href="#">Выбрать</a>
+                      li <span class="address">Комендантский проспект, д. 39, корп. 7, ТЦ "Курень"</span> <a href="#">Выбрать</a>
+                      li <span class="address">Комендантский проспект, д. 40, корп. 8, ТЦ "Курень"</span> <a href="#">Выбрать</a>
+                      li <span class="address">Комендантский проспект, д. 41, корп. 9, ТЦ "Курень"</span> <a href="#">Выбрать</a>
+                      li <span class="address">Комендантский проспект, д. 42, корп. 1, ТЦ "Курень"</span> <a href="#">Выбрать</a>
+                  script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+                  script.
+                    ymaps.ready(init);
+
+                    function init () {
+                        var myMap = new ymaps.Map('dsmap', {
+                                center: [55.76, 37.64],
+                                zoom: 11,
+                                controls: ['zoomControl']
+                            }, {
+                                searchControlProvider: 'yandex#search'
+                            }),
+                            objectManager = new ymaps.ObjectManager({
+                                // Чтобы метки начали кластеризоваться, выставляем опцию.
+                                clusterize: false,
+                                // ObjectManager принимает те же опции, что и кластеризатор.
+                                gridSize: 32,
+                                clusterDisableClickZoom: true
+                            });
+
+                        // Чтобы задать опции одиночным объектам и кластерам,
+                        // обратимся к дочерним коллекциям ObjectManager.
+                        objectManager.objects.options.set({
+                                    iconLayout: 'default#image',
+                                    iconImageHref: 'images/marker.png',
+                                    iconImageSize: [57, 68],
+                                    iconImageOffset: [-29, -68]
+                        });
+                        objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+                        myMap.geoObjects.add(objectManager);
+                        myMap.behaviors.disable('scrollZoom');
+
+                        $.ajax({
+                            url: "data.json"
+                        }).done(function(data) {
+                            objectManager.add(data);
+                        });
+
+                    }
+                  .delivery-self-map
+                    #dsmap
+
+            .delivery-courier(data-order-delivery="Доставка курьером")
+              .default-icon
+                .icon
+                .label: span Доставка курьером
+              .delivery-form
+                .default-icon-active
+                  .icon
+                .form-section
+                  .form-row
+                    .label Местоположение: <span class="required">*</span>
+                    .input: input(class="order-delivery-address required" type="text" placeholder="г. Москва, Россия")
+                  .form-row
+                    .label Индекс: <span class="required">*</span>
+                    .input: input(class="order-delivery-index required" type="text" placeholder="101000")
+                  .form-row
+                    .remark Выберите свой городе в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
+                  .form-row
+                    .label Укажите Ваш адрес для доставки: <span class="required">*</span>
+                    .input: input(class="order-delivery-address required" type="text" placeholder="" value="ул. Аккуратова 12, кв. 34")
+                  .form-row
+                    .label Выберете адрес для доставки из ранее сохраненных: <span class="required">*</span>
+                    .input
+                      select(data-width="100%")
+                        option ул. Аккуратова 12, кв. 34
+                        option ул. Аккуратова 12, кв. 35
+                        option ул. Аккуратова 12, кв. 36
+          .step-footer
+            button(class="step-next" type="button") Продолжить
+
+        .step.step-2
+          .step-header <span>Шаг 2.</span> Желаемая дата и время доставки
+          .step-body
+            .form-date
+              .form-section
+                .form-row
+                  //- .label Дата доставки:
+                  .inputs
+                    .input
+                      label
+                        .label Месяц <span class="required">*</span>
+                        input(class="order-date-month" type="text" value="" placeholder="Месяц")
+                    .input
+                      label
+                        .label День <span class="required">*</span>
+                        input(class="order-date-day" type="text" value="" placeholder="День")
+              .form-section
+                .form-row
+                  //- .label Время:
+                  .inputs
+                    .input
+                      label
+                        .label Диапазон времени от 00:00 <span class="required">*</span>
+                        input(class="order-date-from" type="text" value="" placeholder="от 00:00")
+                    .input
+                      label
+                        .label Диапазон времени до 00:00 <span class="required">*</span>
+                        input(class="order-date-to" type="text" value="" placeholder="до 00:00")
+          .step-footer
+            button(class="step-prev" type="button") Назад
+            button(class="step-next" type="button") Продолжить
+        .step.step-3
+          .step-header <span>Шаг 3.</span> Оплата
+          .step-body
+            .form-pay
+              .checkbox
+                label
+                  input(type="checkbox" name="order-pay" value="Наличными курьеру" checked)
+                  span.icon
+                  span.label Наличными курьеру
+              .checkbox
+                label
+                  input(type="checkbox" name="order-pay" value="Безналичный платеж")
+                  span.icon
+                  span.label Безналичный платеж
+              .checkbox
+                label
+                  input(type="checkbox" name="order-pay" value="Онлайн")
+                  span.icon
+                  span.label Онлайн
+          .step-footer
+            button(class="step-prev" type="button") Назад
+            button(class="step-next" type="button") Продолжить
+        .step.step-4
+          .step-header <span>Шаг 4.</span> Покупатель
+          .step-body
+            .form-user
+              .form-section
+                .form-row
+                  .label ФИО:<span class="required">*</span>
+                  .input: input(class="order-delivery-name required" type="text" placeholder="")
+                .form-row
+                  .label Email:<span class="required">*</span>
+                  //- .input: input(class="order-delivery-email required" type="email" placeholder="")
+                  .input
+                    input(id="step-4-email" class="order-delivery-email required" name="step-4-email" type="email" data-validation="[EMAIL]" data-validation-message=" ")
+                .form-row
+                  .label Телефон:<span class="required">*</span>
+                  .input: input(class="order-delivery-tel required" type="tel" placeholder="")
+                .form-row
+                  .label Комментарий к заказу:
+                  .input: textarea
+                .form-row
+                  .politicy
+                    .checkbox
+                      label
+                        input(type="checkbox" name="politicy" value="1" checked)
+                        span.icon
+                        span.label Я подтверждаю, что я старше 18 лет, принимаю условия работы сайта и даю добровольное согласие на обработку своих персональных данных и получение E-mail с информацией об акциях и новых поступлениях Интернет-магазина.
+
+          .step-footer
+            button(class="step-prev" type="button") Назад
+            button(class="step-next" type="button") Продолжить
+        .step.step-final
+          .step-header Подтверждение заказа
+          .step-body
+            .row
+              .label ФИО:
+              .value(data-order="username")
+            .row
+              .label Email:
+              .value(data-order="email")
+            .row
+              .label Телефон:
+              .value(data-order="tel")
+            .row
+              .label Доставка:
+              .value(data-order="delivery")
+            .row
+              .label Адрес доставки:
+              .value(data-order="address")
+            .row
+              .label Дата и время доставки:
+              .value(data-order="time")
+            .row
+              .label Оплата:
+              .value(data-order="pay")
+          .order-total-items
+            .m_cart
+              table
+                tr
+                  th
+                  th Наименование
+                  th Цена
+                  th Количество
+                  th Сумма
+                tr
+                  td
+                    .preview: img(src="images/item/1.png" alt="")
+                  td
+                    .details
+                      .title: a(href="#") Конфеты Имбирь в шоколаде 100г
+                  td
+                    .price
+                      .current 1 000 руб.
+                  td
+                    .total-items 12 шт.
+                  td
+                    .total-sum
+                      i Итого:
+                      span 12 000 руб.
+                tr
+                  td
+                    .preview: img(src="images/item/1.png" alt="")
+                  td
+                    .details
+                      .title: a(href="#") Конфеты Имбирь в шоколаде 100г
+                  td
+                    .price
+                      .current 1 000 руб.
+                  td
+                    .total-items 12 шт.
+                  td
+                    .total-sum
+                      i Итого:
+                      span 12 000 руб.
+              .cart-sum-result
+                .total.delivery
+                  .label Доставка:
+                  .sum: span 500 руб.
+                .total
+                  .label Итого:
+                  .sum: span 24 000 руб.
+              .cart-final
+                .step-footer
+                  button(class="step-prev" type="button") Назад
+                  .final-submit: a(class="btn btn-red" href="order-completed.html") Оформить заказ

@@ -1,0 +1,219 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Каталог рецептов
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+
+  .page-header.compact
+    .image(style="background-image: url('images/page-header/4.jpg')")
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Рецепты
+        li: a(href="#") Ужин
+    .wrapper
+      .text
+        .title Рецепты на ужин
+        .m_recipes-head-filter
+          .selects
+            .row
+              .col.xs2
+                .select-container.types
+                  select(data-width="100%")
+                    option Закуски
+                    option Салаты
+                    option Первые блюда
+                    option Вторые блюда
+                    option Десерты и выпечка
+              .col.xs2
+                .select-container.dur
+                  select(data-width="100%")
+                    option меньше 30 минут
+                    option 30 минут
+                    option час
+                    option 2 часа
+                    option 3 часа
+                    option более 3 часов
+          .checkboxes
+            .row
+              .food-filter
+                .item
+                  .radios
+                    label
+                      input(type="checkbox" name="food-contain" value="1")
+                      i.label Мясо
+                .item
+                  .radios
+                    label
+                      input(type="checkbox" name="food-contain" value="1")
+                      i.label Рыба
+                .item
+                  .radios
+                    label
+                      input(type="checkbox" name="food-contain" value="1")
+                      i.label Злаки
+                .item
+                  .radios
+                    label
+                      input(type="checkbox" name="food-contain" value="1")
+                      i.label Морепродукты
+                .item
+                  .radios
+                    label
+                      input(type="checkbox" name="food-contain" value="1")
+                      i.label Овощи
+                .item
+                  .radios
+                    label
+                      input(type="checkbox" name="food-contain" value="1")
+                      i.label Фрукты
+                .item
+                  .radios
+                    label
+                      input(type="checkbox" name="food-contain" value="1")
+                      i.label Птица
+
+  main
+    .recipes-list
+      .row
+        .col.xs2.sm3.md4
+          .m_recipe-item
+            .image: a(href="#" style="background-image: url('images/food-1.png')")
+            .details
+              .title: a(href="#") Горбуша с овощами под лимонным соком
+              .complexity Легкий
+              .tag
+                a(href="#") Ужин
+                a(href="#") На каждый день
+                a(href="#") Для диабетиков
+              .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+            .bottom
+              .dur 1 час 20 минут
+              .weight 450 ккал
+        .col.xs2.sm3.md4
+          .m_recipe-item
+            .image: a(href="#" style="background-image: url('images/food-2.png')")
+            .details
+              .title: a(href="#") Горбуша с овощами под лимонным соком
+              .complexity Легкий
+              .tag
+                a(href="#") Ужин
+                a(href="#") На каждый день
+                a(href="#") Для диабетиков
+              .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+            .bottom
+              .dur 1 час 20 минут
+              .weight 450 ккал
+        .col.xs2.sm3.md4
+          .m_recipe-item
+            .image: a(href="#" style="background-image: url('images/food-3.png')")
+            .details
+              .title: a(href="#") Горбуша с овощами под лимонным соком
+              .complexity Легкий
+              .tag
+                a(href="#") Ужин
+                a(href="#") На каждый день
+                a(href="#") Для диабетиков
+              .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+            .bottom
+              .dur 1 час 20 минут
+              .weight 450 ккал
+        .col.xs2.sm3.md4
+          .m_recipe-item
+            .image: a(href="#" style="background-image: url('images/food-4.png')")
+            .details
+              .title: a(href="#") Горбуша с овощами под лимонным соком
+              .complexity Легкий
+              .tag
+                a(href="#") Ужин
+                a(href="#") На каждый день
+                a(href="#") Для диабетиков
+              .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+            .bottom
+              .dur 1 час 20 минут
+              .weight 450 ккал
+      .partnership-material
+        .row
+          .col.sm2
+            a(href="#" target="_blank" style="background-image: url('images/article-ads.png')")
+          .col.sm2
+            a(href="#" target="_blank" style="background-image: url('images/article-ads-1.png')")
+      .row
+        .col.xs2.sm3.md4
+          .m_recipe-item
+            .image: a(href="#" style="background-image: url('images/food-1.png')")
+            .details
+              .title: a(href="#") Горбуша с овощами под лимонным соком
+              .complexity Легкий
+              .tag
+                a(href="#") Ужин
+                a(href="#") На каждый день
+                a(href="#") Для диабетиков
+              .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+            .bottom
+              .dur 1 час 20 минут
+              .weight 450 ккал
+        .col.xs2.sm3.md4
+          .m_recipe-item
+            .image: a(href="#" style="background-image: url('images/food-2.png')")
+            .details
+              .title: a(href="#") Горбуша с овощами под лимонным соком
+              .complexity Легкий
+              .tag
+                a(href="#") Ужин
+                a(href="#") На каждый день
+                a(href="#") Для диабетиков
+              .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+            .bottom
+              .dur 1 час 20 минут
+              .weight 450 ккал
+        .col.xs2.sm3.md4
+          .m_recipe-item
+            .image: a(href="#" style="background-image: url('images/food-3.png')")
+            .details
+              .title: a(href="#") Горбуша с овощами под лимонным соком
+              .complexity Легкий
+              .tag
+                a(href="#") Ужин
+                a(href="#") На каждый день
+                a(href="#") Для диабетиков
+              .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+            .bottom
+              .dur 1 час 20 минут
+              .weight 450 ккал
+        .col.xs2.sm3.md4
+          .m_recipe-item
+            .image: a(href="#" style="background-image: url('images/food-4.png')")
+            .details
+              .title: a(href="#") Горбуша с овощами под лимонным соком
+              .complexity Легкий
+              .tag
+                a(href="#") Ужин
+                a(href="#") На каждый день
+                a(href="#") Для диабетиков
+              .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+            .bottom
+              .dur 1 час 20 минут
+              .weight 450 ккал
+    .m_pagination
+      ul
+        li: a(class="prev" href="#")
+        li: a(href="#") 1
+        li: a(href="#") 2
+        li: a(href="#") 3
+        li: a(href="#") 4
+        li: a(href="#") 5
+        li: a(class="current" href="#") 6
+        li: a(href="#") 7
+        li: a(href="#") 8
+        li: a(href="#") 9
+        li: a(href="#") 10
+        li: a(class="next" href="#")
+    include ../modules/seo-article/m_seo-article.jade

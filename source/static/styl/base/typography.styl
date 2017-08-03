@@ -1,0 +1,244 @@
+body
+  font-size 16px
+  line-height 1.4
+  roman()
+h1, h2, h3, h4, h5, h6
+  line-height 1.1
+  futuris()
+h1
+  font-size 32px
+  @media XS
+    font-size 36px
+h2
+  font-size 28px
+  @media XS
+    font-size 32px
+h3
+  font-size 20px
+  @media XS
+    font-size 24px
+h4
+  font-size 16px
+  @media XS
+    font-size 18px
+h5
+  font-size 14px
+  @media XS
+    font-size 14px
+h6
+  font-size 12px
+  @media XS
+    font-size 12px
+a[href^="tel"]
+  cursor default
+p
+  margin-top 0
+  margin-bottom 20px
+article
+  position relative
+  a
+    text-decoration underline
+    &:hover
+      color red
+  img
+    max-width 100%
+    width 100%
+    display block
+    margin-bottom 20px
+  .frame
+    position relative
+    padding-bottom 56.25%
+    height 0
+    margin-bottom 20px
+    iframe
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
+  h1, h2, h3, h4
+    margin-bottom 0.5em
+  p
+    font-size 14px
+    line-height 24px
+    color #555555
+    &:last-child
+      margin-bottom 0
+  blockquote
+    border-left 3px solid #424242
+    padding-left 20px
+  > ul
+    padding-bottom 20px
+    li
+      position relative
+      padding-left 10px
+      &:before
+        content '•'
+        color #424242
+        font-weight bold
+        position absolute
+        left 0
+        top 0
+      & + li
+        margin-top 5px
+  ol
+    li
+      position relative
+      padding-left 30px
+      counter-increment step-counter
+      margin-bottom 15px
+      &:before
+        content counter(step-counter)
+        margin-right 10px
+        margin-bottom 4px
+        font-size 80%
+        background-color #424242
+        color #fff
+        font-weight bold
+        padding 3px 8px
+        border-radius $radius
+        position absolute
+        left 0
+        top 0
+  .lead-paragraph
+    p
+      font-size 18px
+      line-height 1.3
+      color #000
+      margin-bottom 20px
+      @media XS
+        font-size 24px
+  .bottom-article
+    border-top 1px solid #ebebeb
+    padding-top 20px
+    .share
+      margin-bottom 20px
+      .title
+        font-size 16px
+        color #000000
+        margin-bottom 10px
+    .articles-nav
+      clearfix()
+      margin-top 40px
+      margin-bottom 40px
+      .next
+        margin-top 20px
+        @media screen and (min-width: 640px)
+          text-align right
+        a
+          @media screen and (min-width: 640px)
+            padding-right 70px
+            padding-left 0 !important
+            .arrow
+              left auto !important
+              right 0
+      .previous,
+      .next
+        @media screen and (min-width: 640px)
+          width 50%
+          float left
+          margin-top 0
+        a
+          position relative
+          text-decoration none
+          padding-left 70px
+          display block
+        .label
+          color #555555
+          font-size 14px
+        .title
+          color $green
+          font-size 20px
+          &:hover
+            color #000
+        .arrow
+          anim()
+          width 50px
+          height 50px
+          display block
+          background #fff
+          border-radius 50%
+          border none
+          top 50%
+          margin-top -25px
+          text-indent -9999px
+          box-shadow 0 16px 38px rgba(0,0,0,.35)
+          z-index 1
+          &:hover
+            background $btn-green
+            box-shadow 0 8px 16px rgba(0,0,0,.25)
+          &:after
+            content ''
+            position absolute
+            left 50%
+            top 50%
+            background-image url("../images/sprite.png")
+            background-repeat no-repeat
+          &.prev-arrow
+            position absolute
+            left 0
+            &:after
+              width 13px
+              height 25px
+              margin-top -(@height/2)
+              margin-left -(@width/2)
+              background-position -250px -150px
+            &:hover
+              &:after
+                background-position -300px -250px
+          &.next-arrow
+            position absolute
+            left 0
+            &:after
+              width 13px
+              height 24px
+              margin-top -(@height/2)
+              margin-left -5px
+              background-position -300px -150px
+            &:hover
+              &:after
+                background-position -350px -250px
+.section-title
+  position relative
+  h2
+    margin-bottom 10px
+    display inline-block
+    vertical-align middle
+    color $brown
+    &.center
+      text-align center
+      display block
+  .details
+    vertical-align middle
+    margin-bottom 10px
+    display none
+    @media SM
+      display inline-block
+      margin-left 50px
+    a
+      padding 3px 15px
+      font-size 14px
+      border-radius $radius
+  .total-articles
+    display none
+    @media SM
+      display block
+      position absolute
+      right 0
+      top -10px
+      line-height 1
+      z-index 2
+    .value
+      color #699a35
+      font-size 52px
+      line-height 1
+      futuris()
+      display inline-block
+      vertical-align middle
+    .label
+      font-size 15px
+      line-height 20px
+      color #000
+      bold()
+      display inline-block
+      vertical-align middle

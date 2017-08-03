@@ -1,0 +1,53 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Комплектом дешевле
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+
+  .page-header.main-overlay.large-space
+    .image(style="background-image: url('images/page-header/7.jpg')")
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Акции
+        li: a(href="#") Комплектом дешевле
+    .wrapper
+      .text
+        .title Комплектом дешевле
+  main
+    article
+      p Промо-акция — это разновидность рекламной активности, при которой происходит прямой контакт с потребителем товаров или услуг. Во время этого контакта потенциальный покупатель получает информацию о товаре, услуге, условиях акций и скидках.
+      p Общая цель проведения промо-акций всегда одна — увеличение продаж. Но достигаться эта цель может путем реализации различных задач. В зависимости от поставленных задач, выбирается механика планируемой промо-акции.
+      img(src="images/article-image-1.jpg" alt="")
+      p(lorem="2")
+      p(lorem="2")
+    .m_top-items
+      .wrapper
+        .section-title
+          h2 Товары, участвующие в акции
+        .top-items-content
+          .top-items-carousel-top.top-item-carousels.enabled
+            - for (var x = 0; x < 15; x++)
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/1.png", alt="")
+                  .details
+                    .title: a(href="#") Клетчатка пшеничная крупная 150г*14шт КомпасЗдор
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 11 560 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")

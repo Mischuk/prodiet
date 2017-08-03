@@ -1,0 +1,185 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Карточка товара
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+
+  .page-header.main-overlay.large-space.no-title
+    .image(style="background-image: url('images/page-header/4.jpg')")
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Каталог продукции
+        li: a(href="#") Карточка товара
+  main
+    .m_card(itemscope itemtype="http://schema.org/Product")
+      .section-title
+        h1(itemprop="name") Конфеты Имбирь в шоколаде, 100г
+        .backward
+          a(href="#") Вернуться в каталог
+      .card-item
+        .lead-image
+          .card-icons
+            .new: span НОВИНКА
+            .top: span хит<br>продаж
+            .share: span скидка
+          img(src="images/card-item.png" alt="Конфеты Имбирь в шоколаде" itemprop="image")
+        .lead-details
+          .price(itemprop="offers" itemscope itemtype="http://schema.org/Offer") <i itemprop="price">1 450</i> <span itemprop="priceCurrency">руб.</span>
+          .available
+            span(class="yes") В наличии
+            span(class="no") Нет в наличии
+          .action
+            .total-items
+              input(type='button' value='–' class='qtyminus' field='quantity'+x)
+              input(type='text' name='quantity'+x value='1' class='qty')
+              input(type='button' value='+' class='qtyplus' field='quantity'+x)
+            .cart-options
+              .add-to-cart
+                a(class="btn btn-red" href="#") Купить
+              .simple-add-to-cart
+                a(class="btn btn-green btn-modal" href="#modal-simple-add-to-cart") Купить в 1 клик
+            // Отложить товар
+            // <div class="cart-options no-items"><div class="defer-to-cart"><a class="btn btn-green" href="#">Отложить товар</a><div class="tips">Чтобы отложить товар необходимо <a href="#">войти в личный кабинет</a>.</div><div class="label">Когда товар появится в наличии, мы вас проинформируем!</div></div></div>
+          .details
+            ul
+              li Вес: 100 г
+              li Белки: 100 г
+              li Жиры: 100 г
+              li Углеводы: 100 г
+              li Каллорийность: 200 ккал
+          .desc
+            p Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку, выбрать способ оплаты и доставки заказа в сети Интернет. Выбрав необходимые товары или услуги, пользователь обычно имеет возможность тут же на сайте выбрать метод оплаты и доставки. Основное отличие Интернет-магазина от традиционного — в типе торговой площадки.
+          .socials-share
+            span Поделиться в соц. сетях:
+            a(class="vk" href="#")
+            a(class="in" href="#")
+            a(class="fb" href="#")
+            a(class="gp" href="#")
+            a(class="tt" href="#")
+    .m_pluses
+      h2 Преимущества Продиет
+      .list
+        .item
+          .title
+            .image: img(src="images/pluses-1.png" alt="")
+            span Доставка <br>по всей России
+          .desc Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку.
+        .item
+          .title
+            .image: img(src="images/pluses-2.png" alt="")
+            span Наличный и <br>безналичный расчет
+          .desc Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку.
+        .item
+          .title
+            .image: img(src="images/pluses-3.png" alt="")
+            span Гарантия качества <br>всех товаров
+          .desc Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку.
+        .item
+          .title
+            .image: img(src="images/pluses-4.png" alt="")
+            span Возврат товара <br>в течение 30 дней
+          .desc Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку.
+    .m_top-items
+      .wrapper
+        .top-items-nav
+          a(class="top current" href="#") Лучшие предложения
+          a(class="new" href="#") Ранее вы смотрели
+        .top-items-loader
+          span
+          span
+          span
+        .top-items-content
+          // Хиты продаж
+          .top-items-carousel-top.top-item-carousels.enabled
+            - for (var x = 0; x < 2; x++)
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/1.png", alt="")
+                  .details
+                    .title: a(href="#") Клетчатка пшеничная крупная 150г * 14шт
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 11 560 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/2.png", alt="")
+                  .details
+                    .title: a(href="#") Фитококтейль SK FIBERIA Энергия Ваниль 350г * 12 шт
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 11 560 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/3.png", alt="")
+                  .details
+                    .title: a(href="#") Батончик овсянный Петродиет черничный в шок. глазури 35г * 25шт
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 11 560 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/4.png", alt="")
+                  .details
+                    .title: a(href="#") Заменитель сахара на осн. эритритола №10 САШЕ 1г * 60 пак * 32 шт ФитПарад
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 11 560 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")
+          // Новинки
+          .top-items-carousel-new.top-item-carousels.disabled
+            - for (var x = 0; x < 10; x++)
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/2.png", alt="")
+                  .details
+                    .title: a(href="#") ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 2 123 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")

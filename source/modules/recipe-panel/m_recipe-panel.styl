@@ -1,0 +1,62 @@
+.m_recipe-panel
+  background #fff9ed
+  border 1px solid #f7edd6
+  border-radius $radius
+  padding 25px 20px
+  margin-bottom 20px
+  .complexity
+    color #555
+    @media SM
+      float left
+      width 50%
+    span
+      color #000
+  .dur,
+  .weight
+    float left
+    width 50%
+    margin-top 10px
+    @media SM
+      width 25%
+      margin-top 0
+  .weight
+    position: relative;
+    padding-left: 25px;
+    font-size: 14px;
+    line-height 20px
+    &:after
+      content: '';
+      background: url(../images/sprite.png) no-repeat -100px -300px;
+      width: 20px;
+      height: 19px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -13px;
+  .dur
+    padding-left: 25px;
+    font-size: 14px;
+    position relative
+    line-height 20px
+    &:after
+      content: '';
+      background: url(../images/sprite.png) no-repeat -150px -300px;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -10px;
+  .tags
+    margin-top 15px
+    @media SM
+      margin-top 25px
+    li
+      display inline-block
+      vertical-align middle
+      margin-right 10px
+      a
+        color $green
+        text-decoration none
+        &:hover
+          color #000

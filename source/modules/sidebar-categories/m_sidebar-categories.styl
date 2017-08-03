@@ -1,0 +1,84 @@
+.m_sidebar-categories
+  box-shadow 0 6px 16px rgba(0,0,0,.1)
+  border solid 1px #dddddd
+  margin-bottom 15px
+  .dropdown-aside
+    border-bottom solid 1px #dddddd
+    .dropdown-aside-header
+      a
+        bold()
+        position relative
+        display block
+        font-size 15px
+        color #000
+        padding 18px 20px
+        &:hover
+          color $blue
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -250px -300px;
+          width: 12px;
+          height: 8px;
+          position absolute
+          right 10px
+          top 50%
+          margin-top -4px
+    .box
+      display none
+      background #fff4dc
+      ul
+        padding-left 30px
+        padding-right 10px
+        padding-bottom 10px
+        li
+          a
+            position relative
+            display inline-block
+            vertical-align middle
+            color $brown
+            text-decoration underline
+            font-size 14px
+            padding 5px 0
+            &:hover
+              text-decoration none
+              color $green
+
+    &.open
+      .dropdown-aside-header a
+        background #fff4dc
+        color $brown
+        &:after
+          background-position -300px -300px
+      .box
+        display block
+  .sidebar-categories-box
+    display none
+    @media MD
+      display block
+  .dropdown-aside-categories-header
+    @media MD
+      border-bottom: solid 1px #dddddd
+    &.open
+      border-bottom: solid 1px #dddddd
+    a
+      position relative
+      display block
+      font-size 22px
+      color $brown
+      futuris()
+      padding 18px 20px
+      &:hover
+        color $blue
+      &:after
+        content ''
+        sprite()
+        width 7px
+        height 4px
+        background-position -300px 0
+        position absolute
+        right 20px
+        top 50%
+        margin-top -2px
+        transform rotate(180deg)
+  .dropdown-aside-categories-header.open + .sidebar-categories-box
+    display block

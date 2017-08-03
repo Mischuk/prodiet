@@ -1,0 +1,147 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Статья
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+
+  .page-header.dark
+    .image(style="background-image: url('images/page-header/1.jpg')")
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Статьи
+    .wrapper
+      .text
+        .title Статьи
+  main
+    .m_articles
+      .tabs-header
+        a(class="btn btn-green" href="#") Советы
+        a(class="btn btn-green" href="#") Диета
+        a(class="btn btn-green" href="#") Диабет
+        a(class="btn btn-green" href="#") О продуктах
+      .row
+        .col.xs1.sm2
+          .m_articles-item.lead-item(itemscope itemtype="http://schema.org/Question")
+            .image: a(href="#" style="background-image: url('images/articles-lead-2.png')")
+            .details
+              .post-category Диета
+              .title: a(href="#" itemprop="name") Симптомы дефицита железа: что делать и какие продукты выбирать
+              .desc(itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer") <span itemprop="text">Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.</span>
+              .bottom
+                .viewed 43
+        .col.xs1.sm2
+          .m_articles-item.lead-item(itemscope itemtype="http://schema.org/Question")
+            .image: a(href="#" style="background-image: url('images/articles-lead-3.png')")
+            .details
+              .post-category Диета
+              .title: a(href="#" itemprop="name") Эти простые шаги помогут легко избавиться от сахарной зависимости
+              .desc(itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer") <span itemprop="text">Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.</span>
+              .bottom
+                .viewed 43
+        .col.xs1.sm1
+          .m_articles-item.lead-item(itemscope itemtype="http://schema.org/Question")
+            .image: a(href="#" style="background-image: url('images/articles-lead-1.png')")
+            .details
+              .post-category Диета
+              .title: a(href="#" itemprop="name") Десять продуктов, которые лучше есть не вместе, а по отдельности
+              .desc(itemprop="acceptedAnswer" itemscope itemtype="http://schema.org/Answer") <span itemprop="text">Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.</span>
+              .bottom
+                .viewed 43
+      .row
+        .col.xs2.sm3
+          .m_articles-item
+            .image: a(href="#" style="background-image: url('images/articles-lead-1.png')")
+            .details
+              .post-category Диета
+              .title: a(href="#") Симптомы дефицита железа: что делать и какие продукты выбирать
+              .desc Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.
+            .bottom
+              .viewed 43
+        .col.xs2.sm3
+          .m_articles-item
+            .image: a(href="#" style="background-image: url('images/articles-lead-1.png')")
+            .details
+              .post-category Диета
+              .title: a(href="#") Симптомы дефицита железа: что делать и какие продукты выбирать
+              .desc Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.
+            .bottom
+              .viewed 43
+        .col.xs2.sm3
+          .m_articles-item
+            .image: a(href="#" style="background-image: url('images/articles-lead-1.png')")
+            .details
+              .post-category Диета
+              .title: a(href="#") Симптомы дефицита железа: что делать и какие продукты выбирать
+              .desc Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.
+            .bottom
+              .viewed 43
+      .partnership-material
+        .row
+          .col.sm2
+            a(href="#" target="_blank" style="background-image: url('images/article-ads.png')")
+          .col.sm2
+            a(href="#" target="_blank" style="background-image: url('images/article-ads-1.png')")
+      .row
+        .col.xs2.sm3
+          .m_articles-item
+            .image: a(href="#" style="background-image: url('images/articles-lead-1.png')")
+            .details
+              .post-category Диета
+              .title: a(href="#") Симптомы дефицита железа: что делать и какие продукты выбирать
+              .desc Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.
+            .bottom
+              .viewed 43
+        .col.xs2.sm3
+          .m_articles-item
+            .image: a(href="#" style="background-image: url('images/articles-lead-1.png')")
+            .details
+              .post-category Диета
+              .title: a(href="#") Симптомы дефицита железа: что делать и какие продукты выбирать
+              .desc Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.
+            .bottom
+              .viewed 43
+        .col.xs2.sm3
+          .m_articles-item
+            .image: a(href="#" style="background-image: url('images/articles-lead-1.png')")
+            .details
+              .post-category Диета
+              .title: a(href="#") Симптомы дефицита железа: что делать и какие продукты выбирать
+              .desc Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.
+            .bottom
+              .viewed 43
+        .col.xs2.sm3
+          .m_articles-item
+            .image: a(href="#" style="background-image: url('images/articles-lead-1.png')")
+            .details
+              .post-category Диета
+              .title: a(href="#") Симптомы дефицита железа: что делать и какие продукты выбирать
+              .desc Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.
+            .bottom
+              .viewed 43
+        .col.xs2.sm3
+          .m_articles-item
+            .image: a(href="#" style="background-image: url('images/articles-lead-1.png')")
+            .details
+              .post-category Диета
+              .title: a(href="#") Симптомы дефицита железа: что делать и какие продукты выбирать
+              .desc Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.
+            .bottom
+              .viewed 43
+        .col.xs2.sm3
+          .m_articles-item
+            .image: a(href="#" style="background-image: url('images/articles-lead-1.png')")
+            .details
+              .post-category Диета
+              .title: a(href="#") Симптомы дефицита железа: что делать и какие продукты выбирать
+              .desc Забывая о насыщенной железом пище, мы сталкиваемся со множеством неприятных последствий для здоровья. Наш обзор расскажет, как избежать железодефицита и какие продукты нужно срочно включать в рацион.
+            .bottom
+              .viewed 43
+    include ../modules/seo-article/m_seo-article.jade

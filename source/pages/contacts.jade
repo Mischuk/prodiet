@@ -1,0 +1,57 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Контакты
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  .m_contacts
+    .section-title
+      .m_breadcrumbs
+        ul
+          li: a(href="#") Главная
+          li: a(href="#") Статьи
+      h2 Контакты
+    script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    #map
+    .contacts-info
+      .wrapper
+        .contacts-form
+          form.form.success_popup
+            .form-title
+              h2 Свяжитесь с нами
+            .form-row
+              label
+                input(type="text" placeholder="Как Вас зовут?")
+                i.i-name
+            .form-row
+              label
+                input(type="email" placeholder="Ваш email" required)
+                i.i-email
+            .form-row
+              label
+                textarea(placeholder="Сообщение")
+                i.i-msg
+            .form-row
+              button(class="btn btn-green ripple" type="submit") Отправить
+        .contacts-details
+          .place
+            .row
+              .label Часы работы:
+              .value Пн-сб: с 09:00 до 20:00, <span>в воскресенье на Ваши вопросы отвечает дежурный менеджер.</span>
+            .row
+              .label Адрес:
+              .value Санкт-Петербург, пр. Обуховской обороны д. 51 корп. 6
+            .row
+              .label Телефон:
+              .value: b 8 (812) 677-73-00
+            .row
+              .label Email:
+              .value: a(href="#") info@prodiet.info
+
+

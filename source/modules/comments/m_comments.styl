@@ -1,0 +1,139 @@
+.m_comments
+  position relative
+  padding 30px 0
+  @media LG
+    padding 50px 0
+  .header
+    text-align center
+    padding-bottom 30px
+    @media LG
+      padding-bottom 50px
+    .add-comments
+      margin-bottom 15px
+    .sort-comments
+      font-size 15px
+      color #555
+      a
+        color $green
+        border-bottom 1px dashed $green
+        &:hover
+          color #000
+          border-color #000
+  .item
+    border 1px solid #ebebeb
+    box-shadow 2px 2px 2px rgba(0,0,0,0.3)
+    margin-bottom 15px
+    padding 15px
+    @media SM
+      padding 30px
+      margin-bottom 25px
+    .top
+      padding-bottom 15px
+      .name,
+      .date
+        display inline
+      .name
+        bold()
+        &:after
+          content ','
+      .date
+        color #bebebe
+    .rated
+      width 97px
+      height 16px
+      position relative
+      margin-bottom 15px
+      background url("../images/rating-stars-empty.png") no-repeat 0 0
+      .progress
+        position absolute
+        left 0
+        top 0
+        height 100%
+        background url("../images/rating-stars.png") no-repeat 0 0
+    .post
+      font-size 15px
+      line-height 24px
+      color #555555
+      p
+        &:last-child
+          margin-bottom 0
+  form
+    border 1px solid #ebebeb
+    border-radius $radius
+    margin-top 30px
+    .form-title
+      padding 15px
+      background url("../images/pattern_paper.jpg") repeat 0 0
+      @media SM
+        padding 20px 30px
+    .form-row
+      padding 0 15px
+      @media SM
+        padding 0 30px
+      &:last-child
+        text-align center
+        @media XS
+          text-align left
+        @media SM
+          margin-bottom 30px
+        button[type=submit]
+          margin-left 0
+          margin-bottom 15px
+          @media XS
+            margin-left 35px
+    .set-rating
+      padding-left 35px
+      .label
+        font-size 16px
+        color #555
+      .stars
+        clearfix()
+        display inline-block
+        vertical-align middle
+        a
+          display block
+          float left
+          background: url('../images/rating-stars-empty.png') no-repeat 0 0;
+          width: 17px;
+          height: 16px;
+          margin-right 3px
+          &.full,
+          &:hover,
+          &.checked
+            background-image url("../images/rating-stars.png")
+    .captcha
+      position relative
+      padding-left 35px
+      clearfix()
+      .input
+        margin-bottom 10px
+        @media XS
+          position absolute
+          left 0
+          top 15px
+          width 100%
+          padding-left 185px
+      .preview
+        margin-bottom 10px
+        @media XS
+          float left
+          width 130px
+        .image
+          width 130px
+          height 70px
+          line-height 70px
+          border 1px solid #ebebeb
+          text-align center
+          margin-bottom 5px
+          img
+            display inline-block
+            vertical-align middle
+            max-width 100%
+            max-height 100%
+        .refresh
+          a
+            color $green
+            border-bottom 1px dashed $green
+            &:hover
+              color #000
+              border-color #000

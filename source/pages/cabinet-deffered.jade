@@ -1,0 +1,102 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Мои заказы
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+
+  .page-header.main-overlay.large-space
+    .image(style="background-image: url('images/page-header/4.jpg')")
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Мои заказы
+    .wrapper
+      .text
+        .title Мои заказы
+        .backward: a(href="#") Вернуться в каталог
+  main
+    .m_cabinet
+      .cabinet-nav
+        a(class="btn btn-green" href="#") Список заказов
+        a(class="btn btn-green" href="#") Мои данные
+        a(class="btn btn-green current" href="#") Отложенные товары
+      .orders-list.deffered
+        table
+          tr
+            th товары
+            th цена
+            th статус
+            th
+            th
+          tr
+            td
+              .list
+                .item
+                  .image: a(href="#"): img(src="images/item/1.png" alt="")
+                  .title
+                    a(href="#") Имбирь в шоколаде
+            td
+              .sum 11 000 руб.
+            td
+              .status В наличии
+            td
+              .count
+                .total-items
+                  input(type='text' name='quantity-3' value='1' class='qty' disabled)
+                  input(type='button' value='–' class='qtyminus' field='quantity-3')
+                  input(type='button' value='+' class='qtyplus' field='quantity-3')
+            td
+              .buy
+                a(class="btn btn-red" href="#") Купить
+          tr
+            td
+              .list
+                .item
+                  .image: a(href="#"): img(src="images/item/1.png" alt="")
+                  .title
+                    a(href="#") Имбирь в шоколаде
+            td: .sum 11 000 руб.
+            td: .status Отсутствует
+            td
+            td
+          tr
+            td
+              .list
+                .item
+                  .image: a(href="#"): img(src="images/item/1.png" alt="")
+                  .title
+                    a(href="#") Имбирь в шоколаде
+            td: .sum 11 000 руб.
+            td: .status Отсутствует
+            td
+            td
+          tr
+            td
+              .list
+                .item
+                  .image: a(href="#"): img(src="images/item/1.png" alt="")
+                  .title
+                    a(href="#") Имбирь в шоколаде
+            td: .sum 11 000 руб.
+            td: .status Отсутствует
+            td
+            td
+          tr
+            td
+              .list
+                .item
+                  .image: a(href="#"): img(src="images/item/1.png" alt="")
+                  .title
+                    a(href="#") Имбирь в шоколаде
+            td: .sum 11 000 руб.
+            td: .status Отсутствует
+            td
+            td
+

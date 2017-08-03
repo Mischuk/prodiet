@@ -1,0 +1,32 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Как заказать
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+
+  .page-header.main-overlay.large-space
+    .image(style="background-image: url('images/page-header/4.jpg')")
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") О компании
+    .wrapper
+      .text
+        .header-nav
+          a(class="btn btn-green current" href="#") Как заказать
+          a(class="btn btn-green" href="#") Система скидок
+          a(class="btn btn-green" href="#") Оплата
+          a(class="btn btn-green" href="#") Доставка
+        .title Как заказать
+  main
+    article
+      p(lorem="5")
+      p(lorem="5")
+      p(lorem="5")

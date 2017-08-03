@@ -1,0 +1,87 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Отзывы
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+
+  .page-header.main-overlay.large-space
+    .image(style="background-image: url('images/page-header/6.jpg')")
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Отзывы
+    .wrapper
+      .text
+        .title Отзывы
+        .intro Для того чтобы мы могли еще лучше организовать работу нашего магазина, оперативнее реагировать на ваши пожелания и возможные огрехи в работе с нашей стороны, мы создали книгу жалоб и предложений. Если по какой-либо причине вас не устроило качество нашего обслуживания, если у вас есть дельные предложения по улучшению работы магазина, пишите, и мы обязательно откликнемся. Для скорейшего решения вашего вопроса не забывайте указывать обратные координаты для связи.
+  main
+    .m_comments
+      .header
+        .add-comments
+          a(class="btn btn-green" href="#") Оставить свой отзыв
+        .sort-comments Сортировать <a href="#">по дате</a> или <a href="#">по оценке</a>
+      .list
+        - for (var x = 0; x < 5; x++)
+          .item
+            .top
+              .name Имя Фамилия
+              .date 6 апреля 2015
+            .rated
+              .progress(style="width: 75%")
+            .post
+              p(lorem="2")
+      .m_pagination
+        ul
+          li: a(class="prev" href="#")
+          li: a(href="#") 1
+          li: a(href="#") 2
+          li: a(href="#") 3
+          li: a(href="#") 4
+          li: a(href="#") 5
+          li: a(class="current" href="#") 6
+          li: a(href="#") 7
+          li: a(href="#") 8
+          li: a(href="#") 9
+          li: a(href="#") 10
+          li: a(class="next" href="#")
+      form.form.success_popup#ty-comments
+        .form-title
+          h2 Оставить отзыв
+        .form-row
+          label
+            input(type="text" placeholder="Как Вас зовут?")
+            i.i-name
+        .form-row
+          label
+            input(type="email" placeholder="Ваш email")
+            i.i-email
+        .form-row
+          label
+            textarea(placeholder="Ваш отзыв")
+            i.i-msg
+        .form-row
+          .set-rating
+            .label Ваша оценка
+            .stars
+              a(href="#")
+              a(href="#")
+              a(href="#")
+              a(href="#")
+              a(href="#")
+        .form-row
+          .captcha
+            .preview
+              .image
+              .refresh: a(href="#") Обновить
+            .input
+              input.text(type="text" placeholder="Введите результат решения примера")
+        .form-row
+          button(class="btn btn-green" type="submit") Отправить
+

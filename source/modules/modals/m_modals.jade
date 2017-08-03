@@ -1,0 +1,158 @@
+//- Модальное: заказ звонка вывод
+div(id="modal-ty" class="modal zoom-anim-dialog mfp-hide")
+  .modal-title
+    h2 Наш менеджер свяжется с Вами в ближайшее время
+  .modal-body
+    .socials
+      h4 Мы в соц. сетях:
+      ul
+        li: a(class="vk" href="#")
+        li: a(class="in" href="#")
+        li: a(class="fb" href="#")
+        li: a(class="gp" href="#")
+        li: a(class="tw" href="#")
+//- Модальное: быстрая покупка вывод
+div(id="modal-ty-simple" class="modal zoom-anim-dialog mfp-hide")
+  .modal-title
+    h2 Ваш заказ принят!<br>Наш менеджер свяжется с Вами в ближайшее время.
+//- Модальное: добавление отзыва вывод
+div(id="modal-ty-comments" class="modal zoom-anim-dialog mfp-hide")
+  .modal-title
+    h2 Ваш отзыв успешно отправлен.<br>После прохождения модерации он будет опубликован на сайте!
+//- Модальное: заказ звонка
+div(id="modal-callback" class="modal zoom-anim-dialog mfp-hide")
+  .modal-title
+    h2 Заказать звонок
+    p Мы свяжемся с Вами в ближайшее время
+  .modal-body
+    form.form.success_popup
+      .form-row
+        label
+          input(type="text" placeholder="Как Вас зовут?")
+          i.i-name
+      .form-row
+        label
+          input(type="tel" placeholder="Ваш телефон" required)
+          i.i-tel
+      .form-row
+        button(class="btn btn-green ripple" type="submit") Отправить заявку
+//- Модальное: вход
+div(id="modal-signin" class="modal zoom-anim-dialog mfp-hide")
+  .modal-title
+    h2 Вход с логином и паролем
+  .modal-body
+    form.form
+      .form-row
+        label
+          input(type="email" placeholder="Ваш email" required)
+          i.i-email
+      .form-row
+        label
+          input(type="password" placeholder="Пароль" required)
+          i.i-password
+      .form-row
+        button(class="btn btn-green ripple" type="submit") Войти
+    .social-signin
+      h4 Войти через профиль в соцсетях
+      ul
+        li: a(class="vk" href="#")
+        li: a(class="in" href="#")
+        li: a(class="fb" href="#")
+        li: a(class="gp" href="#")
+        li: a(class="tw" href="#")
+//- Модальное: корзина
+div(id="modal-cart" class="modal zoom-anim-dialog mfp-hide")
+  .modal-body
+    .user-cart
+      .items
+        .item
+          .image
+            a(href="#")
+              img(src="images/item/3.png" alt="")
+          .details
+            .title: a(href="#") Батончик овсяный ПЕТРОДИЕТ черничный в шок.глазури 35г* 25шт
+            .cost
+              .price 10 000 руб.
+              .count x 1 шт
+        .item
+          .image
+            a(href="#")
+              img(src="images/item/1.png" alt="")
+          .details
+            .title: a(href="#") Клетчатка крупная 35г* 25шт
+            .cost
+              .price 2 500 руб.
+              .count x 1 шт
+        .item
+          .image
+            a(href="#")
+              img(src="images/item/2.png" alt="")
+          .details
+            .title: a(href="#") SK Fiber Энергия 35г* 25шт
+            .cost
+              .price 1 250 руб.
+              .count x 1 шт
+      .total Общая сумма: <span class="value">13 750 руб.</span>
+      .action
+        a(class="btn btn-red ripple" href="#") Перейти в корзину
+
+//- Модальное: каталог продукции
+div(id="modal-catalog" class="modal zoom-anim-dialog mfp-hide")
+  .modal-body
+    .catalog
+      .column
+        .item
+          .title: a(href="#") Хлебцы, Хлебные палочки
+          ul
+            - for (var x = 0; x < 9; x++)
+              li: a(href="#") Подкатегория (100)
+        .item
+          .title: a(href="#") Постная продукция
+          ul
+            - for (var x = 0; x < 9; x++)
+              li: a(href="#") Подкатегория (100)
+      .column
+        .item
+          .title: a(href="#") Продукция из Имбиря
+          ul
+            - for (var x = 0; x < 3; x++)
+              li: a(href="#") Подкатегория (100)
+        .item
+          .title: a(href="#") Растительные масла
+        .item
+          .title: a(href="#") Продукция из Сои
+        .item
+          .title: a(href="#") Доп. категория
+//- Модальное: покупка в один клик
+div(id="modal-simple-add-to-cart" class="modal zoom-anim-dialog mfp-hide")
+  .modal-title
+    h2 Купить в 1 клик
+  .modal-body
+    .user-cart
+      .items
+        .item
+          .image
+            a(href="#")
+              img(src="images/item/3.png" alt="")
+          .details
+            .title: a(href="#") Батончик овсяный ПЕТРОДИЕТ черничный в шок.глазури 35г* 25шт
+            .cost
+              .price 10 000 руб.
+              .count x 1 шт
+      .total Общая сумма: <span class="value">10 000 руб.</span>
+
+    form.form.success_popup
+      .form-row
+        label
+          input(type="text" placeholder="Как Вас зовут?")
+          i.i-name
+      .form-row
+        label
+          input(type="email" placeholder="Ваш email" required)
+          i.i-email
+      .form-row
+        label
+          textarea(placeholder="Комментарий к заказу")
+          i.i-msg
+      .form-row
+        button(class="btn btn-green ripple" type="submit") Купить

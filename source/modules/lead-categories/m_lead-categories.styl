@@ -1,0 +1,121 @@
+.m_lead-categories
+  padding-bottom 30px
+  padding-top 50px
+  background url("../images/texture_food.jpg") repeat 0 0
+  background-attachment fixed
+  margin-top -50px
+  .item
+    height 240px
+    line-height 210px
+    border 1px solid #f5f5f5
+    box-shadow 2px 2px 2px rgba(0,0,0,.3)
+    overflow hidden
+    @media XS
+      height 320px
+      line-height 305px
+    @media SM
+      float left
+      width 49%
+      margin-left 2%
+      margin-bottom 2%
+    @media MD
+      height 280px
+      line-height 250px
+    @media LG
+      line-height 350px
+      height 350px
+    &:hover
+      box-shadow 2px 2px 5px 1px rgba(0,0,0,.3)
+    &.large
+      @media MD
+        width 64%
+        a
+          display table
+          padding 30px
+        .title
+          position static
+          display table-cell
+          text-align left
+          vertical-align middle
+          padding-top 0
+          position relative
+        .image
+          text-align right
+          position absolute
+          right 0
+          top 0
+          width 100%
+          height 100%
+          padding 20px
+      @media LG
+        width 67%
+        .image
+          padding 0
+          padding-right 30px
+          img
+            vertical-align middle
+    &.small
+      @media MD
+        width 34%
+        a
+          .title
+            text-align left
+            padding-left 30px
+            padding-top 20px
+      @media LG
+        width 31%
+    &:nth-child(2n+1)
+        @media SM
+          margin-left 0
+    & + .item
+      margin-top 15px
+      @media SM
+        margin-top 0
+    a
+      anim()
+      position relative
+      display block
+      height 100%
+      width 100%
+      background #fff
+      text-align center
+      padding 15px
+      @media LG
+        padding 0
+      &:hover
+        img
+          transform scale(0.8)
+    .title
+      position absolute
+      left 0
+      top 0
+      width 100%
+      text-align center
+      line-height 1
+      color $brown
+      futuris()
+      font-size 24px
+      padding-top 10px
+      z-index 1
+      @media XS
+        font-size 32px
+      @media LG
+        z-index 2
+      &:hover
+        color $green
+    .image
+      width 100%
+      height 100%
+      img
+        anim()
+        display inline-block
+        vertical-align bottom
+        max-width 100%
+        max-height 100%
+        @media LG
+          max-height none
+  .details
+    margin-top 30px
+    text-align center
+    @media MD
+      margin-top 15px

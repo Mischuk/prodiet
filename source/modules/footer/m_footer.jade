@@ -1,0 +1,36 @@
+footer.m_footer(itemscope itemtype="http://schema.org/Organization")
+  .wrapper
+    .copyright
+      span 2017 © <i itemprop="name">Продиет.ру:</i>
+      span Интернет-магазин по продаже диетического и диабетического питания
+    .menu
+      .column
+        .title: a(href="#") Компания
+        ul
+          li: a(href="#") О компании
+          li: a(href="#") Контакты
+      .column
+        .title: a(href="#") Информация
+        ul
+          li: a(href="#") Условия оплаты
+          li: a(href="#") Доставка
+          li: a(href="#") Система скидок
+          li: a(href="#") Как заказать
+    .info
+      .row
+        .tel: a(href="#" itemprop="telephone") 8 800 2000 600
+        .callback: a(class="btn-modal" href="#modal-callback") Заказать звонок
+      .row(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+        .local: span <i itemprop="addressLocality">Москва</i>, ул. <i itemprop="streetAddress">Воронцовская, 20</i>
+        .email: a(href="#"): span(itemprop="email") info@prodiet.info
+      .row
+        .socials
+          span Мы в соц. сетях:
+          a(class="vk" href="#")
+          a(class="in" href="#")
+          a(class="fb" href="#")
+          a(class="gp" href="#")
+          a(class="tw" href="#")
+        .payment
+          span Мы принимаем к оплате:
+      .developed Разработка сайта <a href="#">«Пикмедиа»</a>

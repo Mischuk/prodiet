@@ -1,0 +1,31 @@
+.m_breadcrumbs
+  position relative
+  ul
+    cursor default
+    font-size 0
+    li
+      display inline-block
+      vertical-align middle
+      position relative
+      margin 0 15px
+      &:after
+        content ''
+        background url("../images/breadcrumb-arrow-light.png") no-repeat 0 0
+        width 6px
+        height 9px
+        position absolute
+        right -18px
+        top 50%
+        margin-top -4.5px
+      &:last-child:after
+        display none
+      a
+        color #fff
+        font-size 14px
+        &:hover
+          text-decoration underline
+      &:last-child
+        a
+          color #fff
+          cursor default
+          text-decoration none

@@ -1,0 +1,168 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Каталог рецептов
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+
+  .page-header.compact
+    .image(style="background-image: url('images/page-header/3.jpg')")
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Статьи
+    .wrapper
+      .text
+        .title Каталог рецептов
+        .catalog-recipes-carousel
+          .slide
+            .item
+              .image: a(href="#" style="background-image: url('images/food-1.png')")
+              .details
+                .title: a(href="#") Горбуша с овощами под лимонным соком
+                .complexity Легкий
+              .bottom
+                .dur 1 час 20 минут
+                .weight 450 ккал
+          .slide
+            .item
+              .image: a(href="#" style="background-image: url('images/food-2.png')")
+              .details
+                .title: a(href="#") Горбуша с овощами под лимонным соком
+                .complexity Легкий
+              .bottom
+                .dur 1 час 20 минут
+                .weight 450 ккал
+          .slide
+            .item
+              .image: a(href="#" style="background-image: url('images/food-3.png')")
+              .details
+                .title: a(href="#") Горбуша с овощами под лимонным соком
+                .complexity Легкий
+              .bottom
+                .dur 1 час 20 минут
+                .weight 450 ккал
+          .slide
+            .item
+              .image: a(href="#" style="background-image: url('images/food-4.png')")
+              .details
+                .title: a(href="#") Горбуша с овощами под лимонным соком
+                .complexity Легкий
+              .bottom
+                .dur 1 час 20 минут
+                .weight 450 ккал
+          .slide
+            .item
+              .image: a(href="#" style="background-image: url('images/food-2.png')")
+              .details
+                .title: a(href="#") Горбуша с овощами под лимонным соком
+                .complexity Легкий
+              .bottom
+                .dur 1 час 20 минут
+                .weight 450 ккал
+  main
+    .m_recipes-nav
+      .row
+        .col.xs1.sm2
+          .item.large
+            a(href="#")
+              .image(style="background-image: url('images/food-4.png')")
+              .title Что приготовить на ужин?
+        .col.xs1.sm2
+          .item.large
+            a(href="#")
+              .image(style="background-image: url('images/food-3.png')")
+              .title Рецепты диетических салатов
+      .row
+        .col.xs1.sm3
+          .item
+            a(href="#")
+              .image(style="background-image: url('images/food-2.png')")
+              .title Рецепты на каждый день
+        .col.xs1.sm3
+          .item
+            a(href="#")
+              .image(style="background-image: url('images/article-image-1.jpg')")
+              .title Быстро и вкусно на завтрак
+        .col.xs1.sm3
+          .item
+            a(href="#")
+              .image(style="background-image: url('images/food-1.png')")
+              .title Рецепты десертов
+  .m_recipes-new
+    .wrapper
+      .section-title
+        h2.center Новые рецепты
+      .recipes-filter
+        a(class="btn btn-green" href="#") Завтрак
+        a(class="btn btn-green" href="#") Обед
+        a(class="btn btn-green" href="#") Ужин
+        a(class="btn btn-green" href="#") На каждый день
+      .recipes-list
+        .row
+          - for (var x = 0; x < 2; x++)
+            .col.xs2.sm3.md4
+              .m_recipe-item
+                .image: a(href="#" style="background-image: url('images/food-1.png')")
+                .details
+                  .title: a(href="#") Горбуша с овощами под лимонным соком
+                  .complexity Легкий
+                  .tag
+                    a(href="#") Ужин
+                    a(href="#") На каждый день
+                    a(href="#") Для диабетиков
+                  .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+                .bottom
+                  .dur 1 час 20 минут
+                  .weight 450 ккал
+            .col.xs2.sm3.md4
+              .m_recipe-item
+                .image: a(href="#" style="background-image: url('images/food-2.png')")
+                .details
+                  .title: a(href="#") Горбуша с овощами под лимонным соком
+                  .complexity Легкий
+                  .tag
+                    a(href="#") Ужин
+                    a(href="#") На каждый день
+                    a(href="#") Для диабетиков
+                  .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+                .bottom
+                  .dur 1 час 20 минут
+                  .weight 450 ккал
+            .col.xs2.sm3.md4
+              .m_recipe-item
+                .image: a(href="#" style="background-image: url('images/food-3.png')")
+                .details
+                  .title: a(href="#") Горбуша с овощами под лимонным соком
+                  .complexity Легкий
+                  .tag
+                    a(href="#") Ужин
+                    a(href="#") На каждый день
+                    a(href="#") Для диабетиков
+                  .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+                .bottom
+                  .dur 1 час 20 минут
+                  .weight 450 ккал
+            .col.xs2.sm3.md4
+              .m_recipe-item
+                .image: a(href="#" style="background-image: url('images/food-4.png')")
+                .details
+                  .title: a(href="#") Горбуша с овощами под лимонным соком
+                  .complexity Легкий
+                  .tag
+                    a(href="#") Ужин
+                    a(href="#") На каждый день
+                    a(href="#") Для диабетиков
+                  .desc Свежий и легкий салат с огурцом и яйцом «Арина» для весеннего настроения укрепит ваше здоровье и нервы.
+                .bottom
+                  .dur 1 час 20 минут
+                  .weight 450 ккал
+      .action
+        a.btn.btn-green(href="#") Показать еще
+  include ../modules/seo-article/m_seo-article.jade

@@ -1,0 +1,149 @@
+.m_lead-carousel
+  background url("../images/lead-carousel-bg.jpg") no-repeat 50%
+  background-size cover
+  height 400px
+  margin-bottom 50px
+  position relative
+  @media MD
+    height 500px
+  .slick-list,
+  .slick-track
+    height 100%
+  .slick-arrow
+    anim()
+    width 50px
+    height 50px
+    position absolute
+    top 50%
+    margin-top -(@height/2)
+    background #fff
+    border-radius 50%
+    border none
+    text-indent -9999px
+    box-shadow 0 16px 38px rgba(0,0,0,.35)
+    z-index 1
+    &:hover
+      background $btn-green
+      box-shadow 0 8px 16px rgba(0,0,0,.25)
+    &:after
+      content ''
+      position absolute
+      left 50%
+      top 50%
+      background-image url("../images/sprite.png")
+      background-repeat no-repeat
+    &.slick-prev
+      left 50%
+      margin-left -655px
+      &:after
+        width 13px
+        height 25px
+        margin-top -(@height/2)
+        margin-left -(@width/2)
+        background-position -250px -150px
+      &:hover
+        &:after
+          background-position -300px -250px
+    &.slick-next
+      right 50%
+      margin-right -655px
+      &:after
+        width 13px
+        height 24px
+        margin-top -(@height/2)
+        margin-left -5px
+        background-position -300px -150px
+      &:hover
+        &:after
+          background-position -350px -250px
+  .slick-dots
+    position absolute
+    left 0
+    bottom -50px
+    height 50px
+    text-align center
+    width 100%
+    line-height 50px
+    font-size 0
+    li
+      display inline-block
+      vertical-align middle
+      margin-left 5px
+      margin-right 5px
+      button
+        anim()
+        border none
+        background #d6d395
+        text-indent -9999px
+        font-size 0
+        width 10px
+        height 10px
+        display block
+        border-radius 50%
+      &.slick-active
+        button
+          background #235e21
+  .slide
+    height 100%
+    &.slick-current
+      .slide-text,
+      .slide-image
+        opacity 1
+        transform translateX(0%) scale(1)
+      .slide-text
+        transition: 1s cubic-bezier(.25,.8,.25,1);
+      .slide-image
+        transition: 1.5s cubic-bezier(.25,.8,.25,1);
+    .wrapper
+      display table
+      @media LG
+        width 1200px
+  .slide-image
+    display none
+    @media SM
+      transition: .75s cubic-bezier(.25,.8,.25,1);
+      display block
+      position absolute
+      right 0
+      top 0
+      width 50%
+      height 100%
+      line-height 400px
+      padding 0 15px
+      transform translateX(-150%) scale(0.1)
+      opacity 0
+    @media MD
+      line-height 500px
+      width 55%
+    img
+      max-width 100%
+      max-height 100%
+      display inline-block
+      vertical-align middle
+  .slide-text
+    transition: .75s cubic-bezier(.25,.8,.25,1);
+    text-align center
+    color $brown
+    display table-cell
+    vertical-align middle
+    transform translateX(-150%) scale(0.45)
+    opacity 0
+    @media SM
+      padding-right 50%
+      text-align left
+    @media MD
+      padding-right 55%
+    h1
+      font-size 40px
+      line-height 0.9
+      @media MD
+        font-size 52px
+    p
+      margin 15px 0
+      @media SM
+        margin 30px 0
+      @media MD
+        margin-bottom 60px
+        font-size 18px
+      &:last-child
+        margin-bottom 0

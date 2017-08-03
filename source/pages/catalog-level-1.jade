@@ -1,0 +1,188 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Каталог продукции
+
+block settings
+  - var user_authorised = false
+
+block data
+  include ../static/content/_home.jade
+
+block content
+
+  .page-header.main-overlay.compact
+    .image(style="background-image: url('images/page-header/5.jpg')")
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Каталог продукции
+    .wrapper
+      .text
+        .title Каталог продукции
+  main
+    .m_catalog-categories
+      .column
+        .lead
+          .image: img(src="images/catalog-categories/1.png" alt="")
+          .links
+            .title: a(href="#") Хлебцы, Хлебные палочки
+            ul
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+        .desc Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло.
+      .column
+        .lead
+          .image: img(src="images/catalog-categories/2.png" alt="")
+          .links
+            .title: a(href="#") Продукция из Имбиря
+            ul
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+        .desc Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло.
+      .column
+        .lead
+          .image: img(src="images/catalog-categories/3.png" alt="")
+          .links
+            .title: a(href="#") Постная продукция
+            ul
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+        .desc Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло.
+      .column
+        .lead
+          .image: img(src="images/catalog-categories/4.png" alt="")
+          .links
+            .title: a(href="#") Продукция из Сои
+            ul
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+              li: a(href="#") Подкатегория (100)
+        .desc Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло.
+    .m_seo-text
+      h4 Пример SEO текста
+      p Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло.
+      p Его многочисленные, убого тонкие по сравнению с остальным телом ножки беспомощно копошились у него перед глазами. «Что со мной случилось?» – подумал он. Это не было сном. Его комната, настоящая, разве что слишком маленькая, но обычная комната, мирно покоилась в своих четырех хорошо знакомых стенах. Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку.
+    .m_top-items
+      .wrapper
+        .top-items-nav
+          a(class="top current" href="#") Лучшие предложения
+          a(class="new" href="#") Ранее вы смотрели
+        .top-items-loader
+          span
+          span
+          span
+        .top-items-content
+          // Хиты продаж
+          .top-items-carousel-top.top-item-carousels.enabled
+            - for (var x = 0; x < 2; x++)
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/1.png", alt="")
+                  .details
+                    .title: a(href="#") Клетчатка пшеничная крупная 150г * 14шт
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 11 560 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/2.png", alt="")
+                  .details
+                    .title: a(href="#") Фитококтейль SK FIBERIA Энергия Ваниль 350г * 12 шт
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 11 560 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/3.png", alt="")
+                  .details
+                    .title: a(href="#") Батончик овсянный Петродиет черничный в шок. глазури 35г * 25шт
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 11 560 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/4.png", alt="")
+                  .details
+                    .title: a(href="#") Заменитель сахара на осн. эритритола №10 САШЕ 1г * 60 пак * 32 шт ФитПарад
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 11 560 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")
+          // Новинки
+          .top-items-carousel-new.top-item-carousels.disabled
+            - for (var x = 0; x < 10; x++)
+              .slide
+                .item
+                  .image: a(href="#"): img(src="images/item/2.png", alt="")
+                  .details
+                    .title: a(href="#") ФитококтейльSK FIBERiaЭнергия Ваниль 350г*12штСибирскаяКлетчатка
+                    .available
+                      span.yes В наличии
+                      span.no Нет в наличии
+                    .price 2 123 руб.
+                  .bottom
+                    .total-items
+                      input(type='button' value='–' class='qtyminus' field='quantity'+x)
+                      input(type='text' name='quantity'+x value='1' class='qty')
+                      input(type='button' value='+' class='qtyplus' field='quantity'+x)
+                    .add-to-cart
+                      a(href="#")

@@ -1,0 +1,89 @@
+form.form
+  .form-row
+    margin-top 20px
+  label
+    position relative
+    display block
+    padding-left 35px
+    @media SM
+      padding-left 40px
+    i
+      position absolute
+      left 0
+      top 50%
+      background-image url("../images/sprite.png")
+      background-repeat no-repeat
+      &.i-name
+        background-position -50px -50px
+        width 20px
+        height 20px
+        margin-top -(@height/2)
+      &.i-tel
+        background-position -100px -50px
+        width 16px
+        height 24px
+        margin-top -(@height/2)
+      &.i-password
+        background-position -150px -50px
+        width 20px
+        height 20px
+        margin-top -(@height/2)
+      &.i-msg
+        background-position -200px -50px
+        width 20px
+        height 19px
+        margin-top -(@height/2)
+      &.i-code
+        background-position -250px -50px
+        width 24px
+        height 24px
+        margin-top -(@height/2)
+      &.i-recipe-type
+        background-position -300px -50px
+        width 25px
+        height 25px
+        margin-top -(@height/2)
+      &.i-duration
+        background-position -350px -50px
+        width 24px
+        height 24px
+        margin-top -(@height/2)
+      &.i-email
+        background-position -400px -162px
+        width 20px
+        height 16px
+        margin-top -(@height/2)
+  input,
+  textarea
+    width 100%
+    border none
+    border-bottom 1px solid $border
+    font-size 16px
+    roman()
+    padding 10px 0
+    &:focus
+      & + .i-name
+        background-position -50px -100px
+      & + .i-tel
+        background-position -100px -100px
+      & + .i-password
+        background-position -150px -100px
+      & + .i-msg
+        background-position -200px -100px
+      & + .i-code
+        background-position -250px -100px
+      & + .i-recipe-type
+        background-position -300px -100px
+      & + .i-duration
+        background-position -350px -100px
+      & + .i-email
+        background-position -424px -178px
+  textarea
+    padding-bottom 0px
+    padding-top 10px
+    line-height 1
+    height 38px
+  button[type=submit]
+    margin-left 35px
+    @media SM
+      margin-left 40px

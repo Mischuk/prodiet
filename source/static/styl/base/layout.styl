@@ -1,0 +1,554 @@
+$wrapper = 1200px
+$gutter = 2%
+html
+  position relative
+  min-height 100%
+body
+  background #fff4dc
+.container
+  height 100%
+
+.wrapper
+  clearfix()
+  position relative
+  max-width $wrapper
+  height 100%
+  padding-left 15px
+  padding-right 15px
+  margin-left auto
+  margin-right auto
+
+main
+  display block
+  max-width $wrapper
+  padding 0 15px
+  margin 0 auto
+  position relative
+  > article
+    padding 30px 0
+    @media LG
+      padding 50px 100px
+  .m_lead-articles,
+  .m_top-items,
+  .m_lead-recipes
+    margin-left -15px
+    margin-right -15px
+    @media screen and (min-width: 1370px)
+      margin-left -100px
+      margin-right -100px
+  .m_lead-recipes
+    background url("../images/pattern_paper.jpg") repeat 0 0
+    background-attachment fixed
+    .top-item-carousels
+      &:before,
+      &:after
+        display none
+  .m_seo-article
+    article
+      padding-left 0
+      padding-right 0
+  > .recipes-list
+    padding-top 30px
+    @media LG
+      padding-top 40px
+.backdrop
+  background rgba(0,0,0,.5)
+  position absolute
+  left 0
+  top 0
+  z-index 100
+  display none
+  width 100%
+  height 100%
+// Grid layout
+.row
+  clearfix()
+  .col
+    float left
+    width 100%
+    margin ($gutter/2) 0
+    @media XS
+      &.xs1
+        width 100%
+        margin-left 0
+        margin-right 0
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left 0
+          margin-right 0
+      &.xs2
+        width ((100% - $gutter)/2)
+        margin-left $gutter
+        &:nth-child(2n+1)
+          margin-left 0
+      &.xs3
+        width ((100% - $gutter*2)/3)
+        margin-left $gutter
+        &:nth-child(3n+1)
+          margin-left 0
+      &.xs4
+        width ((100% - $gutter*3)/4)
+        margin-left $gutter
+        &:nth-child(4n+1)
+          margin-left 0
+      &.xs6
+        width ((100% - $gutter*5)/6)
+        margin-left $gutter
+        &:nth-child(6n+1)
+          margin-left 0
+    @media SM
+      &.sm1
+        width 100%
+        margin-left 0
+        margin-right 0
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left 0
+          margin-right 0
+      &.sm2
+        width ((100% - $gutter)/2)
+        margin-left $gutter
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(2n+1)
+          margin-left 0
+      &.sm3
+        width ((100% - $gutter*2)/3)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(3n+1)
+          margin-left 0
+      &.sm4
+        width ((100% - $gutter*3)/4)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(4n+1)
+          margin-left 0
+      &.sm6
+        width ((100% - $gutter*5)/6)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1)
+          margin-left $gutter
+        &:nth-child(6n+1)
+          margin-left 0
+    @media MD
+      &.md1
+        width 100%
+        margin-left 0
+        margin-right 0
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left 0
+          margin-right 0
+      &.md2
+        width ((100% - $gutter)/2)
+        margin-left $gutter
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(2n+1)
+          margin-left 0
+      &.md3
+        width ((100% - $gutter*2)/3)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(3n+1)
+          margin-left 0
+      &.md4
+        width ((100% - $gutter*3)/4)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(4n+1)
+          margin-left 0
+      &.md6
+        width ((100% - $gutter*5)/6)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1)
+          margin-left $gutter
+        &:nth-child(6n+1)
+          margin-left 0
+    @media LG
+      &.lg1
+        width 100%
+        margin-left 0
+        margin-right 0
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left 0
+          margin-right 0
+      &.lg2
+        width ((100% - $gutter)/2)
+        margin-left $gutter
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(2n+1)
+          margin-left 0
+      &.lg3
+        width ((100% - $gutter*2)/3)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(3n+1)
+          margin-left 0
+      &.lg4
+        width ((100% - $gutter*3)/4)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(4n+1)
+          margin-left 0
+      &.lg6
+        width ((100% - $gutter*5)/6)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1)
+          margin-left $gutter
+        &:nth-child(6n+1)
+          margin-left 0
+
+.partnership-material
+  display none
+  @media LG
+    display block
+  a
+    anim()
+    display block
+    height 200px
+    width 100%
+    background-repeat no-repeat
+    background-position 50%
+    background-size cover
+    box-shadow 2px 2px 2px rgba(0,0,0,.3)
+    &:hover
+      opacity .9
+.page-header
+  position relative
+  text-align center
+  padding 100px 0
+  @media MD
+    padding 170px 0
+  &.main-overlay
+    & + main
+      max-width 1370px
+      background #fff
+      .container
+        clearfix()
+        height auto
+        padding 30px 0
+        @media MD
+          padding 50px 0
+        .sidebar
+          width 100%
+          @media MD
+            float right
+            width 24%
+            &.left
+              float left
+              margin-right 2%
+          .latest-recipes
+            border 1px solid #dddddd
+            border-radius $radius
+            padding 25px 20px
+            margin-bottom 30px
+            display none
+            @media MD
+              display block
+            > .title
+              futuris()
+              font-size 24px
+              margin-bottom 20px
+            .list
+              .item
+                clearfix()
+                & + .item
+                  margin-top 15px
+                .details
+                  padding-left 70px
+                  .title
+                    a
+                      color #000
+                      anim()
+                      bold()
+                      &:hover
+                        color $green
+                  .desc
+                    font-size 13px
+                    line-height 23px
+                .image
+                  width 60px
+                  height 60px
+                  float left
+                  a
+                    anim()
+                    display block
+                    width 100%
+                    height 100%
+                    &:hover
+                      opacity .9
+                    img
+                      display block
+                      width 100%
+                      height 100%
+          .search-recipe
+            margin-bottom 30px
+            background #fff9ed
+            border 1px solid #f7edd6
+            border-radius $radius
+            padding 25px 20px
+            display none
+            @media MD
+              display block
+            form
+              position relative
+              padding-right 55px
+              input
+                width 100%
+                height 30px
+                border none
+                background none
+                font-size 15px
+                border-bottom 1px solid #bebebe
+                roman()
+              button
+                anim()
+                background $btn-green
+                width 40px
+                height 40px
+                border none
+                position absolute
+                right 0
+                top 50%
+                margin-top -(@height/2)
+                border-radius 50%
+                &:hover
+                  background $green
+                &:after
+                  content ''
+                  background: url('../images/sprite.png') no-repeat -100px -250px;
+                  width: 19px;
+                  height: 20px;
+                  position absolute
+                  left 50%
+                  top 50%
+                  margin-left -(@width/2)
+                  margin-top -(@height/2)
+          .partnership-view
+            display none
+            @media MD
+              display block
+            a.item
+              display block
+              box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+              border-radius $radius
+              overflow hidden
+              margin-bottom 30px
+              &:hover
+                img
+                  opacity .9
+              img
+                anim()
+                display block
+                width 100%
+        .content
+          width 100%
+          @media MD
+            float left
+            width 74%
+          @media LG
+            padding-right 15px
+    @media screen and (min-width: 1370px)
+      padding-top 100px
+      padding-bottom 210px
+      & + main
+        margin-top -100px
+        margin-bottom 30px
+        box-shadow 0 0 25px 2px rgba(0,0,0,.15)
+        padding-left 100px
+        padding-right 100px
+  &.compact
+    padding-top 0
+    padding-bottom 0
+  &.large-space
+    padding-top 0
+    padding-bottom 0
+    @media screen and (min-width: 1370px)
+      padding-bottom 250px
+      padding-top 50px
+      .text
+        padding-top 25px
+        padding-bottom 80px
+      & + main
+        margin-top -285px
+  &.no-title
+    .m_breadcrumbs
+      position static
+      padding 15px 0
+      @media screen and (min-width: 1370px)
+        position relative
+        top -43px
+  &.dark
+    .m_breadcrumbs
+      a
+        color $green
+      li:after
+        background-image url("../images/breadcrumb-arrow.png")
+      li:last-child a
+        color $brown
+    .title
+      color $brown
+  &.main-overlay.compact
+    padding-top 0
+    padding-bottom 0
+    @media screen and (min-width: 1370px)
+      padding-top 20px
+      padding-bottom 100px
+  .image
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+    background-repeat no-repeat
+    background-position 50%
+    background-size cover
+    &:after
+      content ''
+      width 100%
+      height 100%
+      background #000
+      opacity .4
+      position absolute
+      left 0
+      top 0
+  .m_breadcrumbs
+    position absolute
+    left 0
+    top 0
+    width 100%
+    padding-top 15px
+  .text
+    position relative
+    z-index 2
+    padding 50px 0
+  .title
+    futuris()
+    color #fff
+    font-size 32px
+    line-height 1
+    @media XS
+      font-size 40px
+    @media MD
+      font-size 52px
+      max-width 1000px
+      margin-left auto
+      margin-right auto
+  .intro
+    color #fff
+    font-size 16px
+    line-height 24px
+    max-width 800px
+    margin-left auto
+    margin-right auto
+    margin-top 15px
+    @media SM
+      font-size 18px
+      line-height 26px
+      margin-top 30px
+  .post-category
+    color #fff
+    margin-bottom 15px
+    font-size 14px
+    position absolute
+    top 0
+    left 0
+    width 100%
+  .post-viewed
+    margin-top 30px
+    position absolute
+    left 0
+    bottom 0
+    width 100%
+    span
+      position relative
+      display inline-block
+      vertical-align middle
+      padding-left: 25px;
+      font-size: 14px;
+      color: #d6d395;
+      &:after
+        content: '';
+        background: url(../images/sprite.png) no-repeat 0 -250px;
+        width: 16px;
+        height: 10px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -5px;
+  .header-nav
+    text-align center
+    margin-bottom 30px
+    a
+      padding 10px 10px
+      font-size 14px
+      line-height 1
+      margin 5px
+      @media XS
+        padding 10px 30px
+      &.current
+        background $green
+        box-shadow none
+  .backward
+    a
+      color #fff
+      position relative
+      display inline-block
+      vertical-align middle
+      padding-left 20px
+      font-size 14px
+      line-height 40px
+      margin-top 15px
+      &:hover
+        text-decoration underline
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -100px -350px;
+        width: 12px;
+        height: 12px;
+        position absolute
+        left 0
+        top 50%
+        margin-top -(@height/2)

@@ -1,0 +1,69 @@
+header(class=user_authorised?"m_header authorised":'m_header')
+  .top
+    .wrapper
+      .mobile-menu
+        .btn-mobile-menu: i
+      .menu
+        ul
+          li: a(href="#") О компании
+          li: a(href="#") Система скидок
+          li: a(href="#") Как заказать
+          li: a(href="#") Контакты
+      .socials
+        ul
+          li: a(class="vk" href="#")
+          li: a(class="in" href="#")
+          li: a(class="fb" href="#")
+          li: a(class="gp" href="#")
+          li: a(class="tw" href="#")
+  .bottom
+    .wrapper
+      .logo
+        a(href="#")
+          img(src="images/logo.png" alt="" title="Интернет-магазин здорового питания")
+          span Интернет-магазин здорового питания
+      .actions
+        .row
+          .mobile-search
+            button(class="btn-mobile-search" type="button")
+          .search
+            form
+              input(type="text" placeholder="Введите название товара" autocomplete="off")
+              button(type="submit")
+          .contacts
+            .tel: a(href="#") 8 800 2000 600
+            .callback: a(class="btn-modal" href="#modal-callback") Заказать звонок
+        .row
+          nav
+            ul
+              li: a(class="btn-modal" href="#modal-catalog") Каталог продукции
+              li: a(href="#") Акции
+              li: a(href="#") Новинки
+              li: a(href="#") Статьи
+              li: a(href="#") Рецепты
+          .user-panel
+            .guest
+              a(class="btn-modal" href="#modal-signin") Вход
+            .authorised
+              .desktop
+                .username Спиридонов Константин Иванович
+                .options
+                  a(href="#") Личный кабинет
+                  a(href="#") Выйти
+              .mobile
+                a(href="#")
+                  .username Спиридонов Константин Иванович
+            .cart
+              a(class="btn-modal" href="#modal-cart")
+                span.label <span class="value">3</span> товаров
+  .responsive-menu
+    ul
+      li: a(class="btn-modal" href="#modal-catalog") Каталог продукции
+      li: a(href="#") Акции
+      li: a(href="#") Новинки
+      li: a(href="#") Статьи
+      li: a(href="#") Рецепты
+      li: a(href="#") О компании
+      li: a(href="#") Система скидок
+      li: a(href="#") Как заказать
+      li: a(href="#") Контакты
