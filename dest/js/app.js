@@ -98,7 +98,8 @@ $(function() {    $('a[href="#"]').click(function(e){ e.preventDefault(); }); 
         }
       }
       topItems_carousels();
-      $(window).resize(topItems_carousels);
+      // $(window).resize(topItems_carousels);
+      $(window).resize($.throttle(topItems_carousels, 1500));
       var $topItemsNav = $('.top-items-nav a');
       $topItemsNav.on('click', function(){
         if ( !$(this).hasClass('current') ) {
